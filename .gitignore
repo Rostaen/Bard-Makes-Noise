@@ -1,0 +1,15 @@
+# ignoring compressed files
+*.zip
+*.rar
+*.7zip
+
+# ignoring folders
+images/
+pdfs/
+
+# ignoring files
+._jazz-bardian1959.pdf
+._bardjazzfest.php
+jazz-bardian1959.pdf
+verify-contact.php
+verify-contact2.php
