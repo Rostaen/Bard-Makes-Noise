@@ -1,6 +1,7 @@
 <?php
     require_once("template.php");
-	
+	include_once("functionCalls.php");
+
 	$page = new Template();
 	$page->setTitle('1973 | Bands of Bard | Bard Makes Noise');
 	$page->setMetaKW('');
@@ -54,17 +55,7 @@
 			<div class="pb-3">
 				<h2 class="pb-1">Music</h2>
 				<div class="pb-3">
-					<h3>Afternoon Delight</h3>
-					<div style="width: 100%; height: 100px; position: relative;">
-						<iframe
-							frameborder="0"
-							width="100%"
-							height="100"
-							title="Band MP3"
-							src="https://drive.google.com/file/d/1ZVcIl59518mk_nMY_GwFliioZfpxw8cL/preview?usp=sharing">
-						</iframe>
-						<div style="width: 53px; height: 55px; position: absolute; opacity: 0; right: 0px; top: 0px;">&nbsp;</div>
-					</div>
+					<?php musicFile("Afternoon Delight", "https://drive.google.com/file/d/1ZVcIl59518mk_nMY_GwFliioZfpxw8cL/preview?usp=sharing"); ?>
 				</div>
 			</div>
 			<div class="pb-4">
@@ -82,21 +73,13 @@
 
 					<!-- The slideshow -->
 					<div class="carousel-inner">
-						<div class="carousel-item active">
-							<img src="https://www.bard.edu/bardmakesnoise/images/1973/1973a.jpg" alt="1973 live in the late 80s" data-toggle="modal" data-target="#lsImg1">
-						</div>
-						<div class="carousel-item">
-							<img src="https://www.bard.edu/bardmakesnoise/images/1973/1973b.jpg" alt="1973 live in Kline Commons" data-toggle="modal" data-target="#lsImg2">
-						</div>
-						<div class="carousel-item">
-							<img src="https://www.bard.edu/bardmakesnoise/images/1973/1973poster3.jpg" alt="1973 Poster" data-toggle="modal" data-target="#lsImg3">
-						</div>
-						<div class="carousel-item">
-							<img src="https://www.bard.edu/bardmakesnoise/images/showflyers/1973poster1.jpg" alt="Show Flyer" data-toggle="modal" data-target="#lsImg4">
-						</div>
-						<div class="carousel-item">
-							<img src="https://www.bard.edu/bardmakesnoise/images/showflyers/1973poster2.jpg" alt="Show Flyer" data-toggle="modal" data-target="#lsImg5">
-						</div>
+						<?php
+							carouselImage("1973/1973a.jpg", "1973 live in the late 80s", 1);
+							carouselImage("1973/1973b.jpg", "1973 live in Kline Commons", 2);
+							carouselImage("1973/1973poster3.jpg", "1973 Poster", 3);
+							carouselImage("showflyers/1973poster1.jpg", "Show Flyer", 4);
+							carouselImage("showflyers/1973poster2.jpg", "Show Flyer", 5);
+						?>
 					</div>
 
 					<!-- Left and right controls -->
@@ -113,83 +96,12 @@
 	</div>
 
 	<!-- Flyer -->
-	<div class="modal" id="lsImg1">
-		<div class="modal-dialog-mod">
-			<div class="modal-content">
-				<!-- Modal Header -->
-				<div class="modal-header">
-					<h4 class="modal-title">1973 live in the late 80s</h4>
-					<button type="button" class="close" data-dismiss="modal">&times;</button>
-				</div>
-				<!-- Modal body -->
-				<div class="modal-body d-flex justify-content-center">
-					<img src="https://www.bard.edu/bardmakesnoise/images/1973/1973a.jpg" class="img-fluid" alt="1973 live in the late 80s" data-toggle="modal" data-target="#lsImg1">
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- Carousel Images -->
-	<div class="modal" id="lsImg2">
-		<div class="modal-dialog-mod">
-			<div class="modal-content">
-				<!-- Modal Header -->
-				<div class="modal-header">
-					<h4 class="modal-title">1973 live in Kline Commons</h4>
-					<button type="button" class="close" data-dismiss="modal">&times;</button>
-				</div>
-				<!-- Modal body -->
-				<div class="modal-body d-flex justify-content-center">
-					<img src="https://www.bard.edu/bardmakesnoise/images/1973/1973b.jpg" alt="1973 live in Kline Commons" data-toggle="modal" data-target="#lsImg2">
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="modal" id="lsImg3">
-		<div class="modal-dialog-mod">
-			<div class="modal-content">
-				<!-- Modal Header -->
-				<div class="modal-header">
-					<h4 class="modal-title">1973 Poster</h4>
-					<button type="button" class="close" data-dismiss="modal">&times;</button>
-				</div>
-				<!-- Modal body -->
-				<div class="modal-body d-flex justify-content-center">
-					<img src="https://www.bard.edu/bardmakesnoise/images/1973/1973poster3.jpg" alt="1973 Poster of 1973" data-toggle="modal" data-target="#lsImg3">
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="modal" id="lsImg4">
-		<div class="modal-dialog-mod">
-			<div class="modal-content">
-				<!-- Modal Header -->
-				<div class="modal-header">
-					<h4 class="modal-title">Show Flyer</h4>
-					<button type="button" class="close" data-dismiss="modal">&times;</button>
-				</div>
-				<!-- Modal body -->
-				<div class="modal-body d-flex justify-content-center">
-					<img src="https://www.bard.edu/bardmakesnoise/images/showflyers/1973poster1.jpg" alt="Show Flyer" data-toggle="modal" data-target="#lsImg4">
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="modal" id="lsImg5">
-		<div class="modal-dialog-mod">
-			<div class="modal-content">
-				<!-- Modal Header -->
-				<div class="modal-header">
-					<h4 class="modal-title">Show Flyer</h4>
-					<button type="button" class="close" data-dismiss="modal">&times;</button>
-				</div>
-				<!-- Modal body -->
-				<div class="modal-body d-flex justify-content-center">
-					<img src="https://www.bard.edu/bardmakesnoise/images/showflyers/1973poster2.jpg" alt="Show Flyer" data-toggle="modal" data-target="#lsImg5">
-				</div>
-			</div>
-		</div>
-	</div>
+	<?php
+		modalPopUp(1, "1973 live in the late 80s", "1973/1973a.jpg", "1973 live in the late 80s");
+		modalPopUp(2, "1973 live in Kline Commons", "1973/1973b.jpg", "1973 live in Kline Commons");
+		modalPopUp(3, "1973 Poster", "1973/1973poster3.jpg", "1973 Poster of 1973");
+		modalPopUp(4, "Show Flyer", "showflyers/1973poster1.jpg", "Show Flyer");
+		modalPopUp(5, "Show Flyer", "showflyers/1973poster2.jpg", "Show Flyer");
 
-<?php
 	$page->close();
 ?>
