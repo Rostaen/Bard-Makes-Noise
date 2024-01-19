@@ -1,40 +1,34 @@
 <?php
-    require_once("template.php");
-	
-	$page = new Template();
-	$page->setTitle('Donald Fagen &amp; Walter Becker | Steely Dan | Bands of Bard | Bard Makes Noise');
-	$page->setMetaKW('');
-	$page->setMetaDesc('');
+require_once("template.php");
+include_once("bandPageFunctions.php");
+$page = new Template();
+$page->setTitle('Donald Fagen &amp; Walter Becker | Steely Dan | Bands of Bard | Bard Makes Noise');
+$page->setMetaKW('');
+$page->setMetaDesc('');
 
-	// print page header
-	$page->open();
+// print page header
+$page->open();
+responsiveImageCSS();
 ?>
-<style>
-	/* Make the image fully responsive */
-	.carousel-inner img {
-		width: 100%;
-		height: 100%;
-	}
-</style>
-	<div class="row lt-gray">
-		<div class="col-lg-8">
-			<h1>Donald Fagen &amp; Walter Becker [Steely Dan]</h1>
-			<p class="blockquote">
-				I was smoking with the boys upstairs<br>
-				When I heard about the whole affair.<br>
-				I said, "Whoa, no -- William and Mary won't do now."<br>
-				Well, I did not think the girl could be so cruel<br>
-				And I'm never going back to my old school.
-			</p>
-			<p class="blockquote-footer">
-				Steely Dan, "My Old School"
-			</p>
-			<p>
-				Donald Fagen came to Bard interested in literature and jazz and played with various bands for his first couple years. While at Bard, Fagen met Walter Becker, his future partner and co-founder of the band Steely Dan. The unique sound of Steely Dan which combined jazz harmonies and rhythms of urban blues and rock made Fagen and Becker an instant success. In 1981, Fagen began a solo career, receiving a Grammy nomination for his first album. In 1985, Fagen "came back to his old school" to receive an honorary Doctor of the Arts degree. He was interviewed by Ellen Barker for the  <a href="https://digitalcommons.bard.edu/cgi/viewcontent.cgi?article=1234&context=observer" target="_blank">Bard Observer</a> at this time. In 2006, Fagen discussed the origins of Steely Dan at Bard College with <a href="https://ew.com/article/2006/03/17/origins-steely-dan/" target="_blank">Entertainment Weekly</a>.
-			</p>
-		</div>
-		<div class="col-lg-4 pb-3">
-			<!-- <div class="pb-3">
+<div class="row lt-gray">
+	<section class="col-lg-8">
+		<h1>Donald Fagen &amp; Walter Becker [Steely Dan]</h1>
+		<p class="blockquote">
+			I was smoking with the boys upstairs<br>
+			When I heard about the whole affair.<br>
+			I said, "Whoa, no -- William and Mary won't do now."<br>
+			Well, I did not think the girl could be so cruel<br>
+			And I'm never going back to my old school.
+		</p>
+		<p class="blockquote-footer">
+			Steely Dan, "My Old School"
+		</p>
+		<p>
+			Donald Fagen came to Bard interested in literature and jazz and played with various bands for his first couple years. While at Bard, Fagen met Walter Becker, his future partner and co-founder of the band Steely Dan. The unique sound of Steely Dan which combined jazz harmonies and rhythms of urban blues and rock made Fagen and Becker an instant success. In 1981, Fagen began a solo career, receiving a Grammy nomination for his first album. In 1985, Fagen "came back to his old school" to receive an honorary Doctor of the Arts degree. He was interviewed by Ellen Barker for the <a href="https://digitalcommons.bard.edu/cgi/viewcontent.cgi?article=1234&context=observer" target="_blank">Bard Observer</a> at this time. In 2006, Fagen discussed the origins of Steely Dan at Bard College with <a href="https://ew.com/article/2006/03/17/origins-steely-dan/" target="_blank">Entertainment Weekly</a>.
+		</p>
+	</section>
+	<aside class="col-lg-4 pb-3">
+		<!-- <div class="pb-3">
 				<h2 class="pb-1">Music</h2>
 				<div class="pb-3">
 					<h3>Barnyard Stomp</h3>
@@ -51,12 +45,12 @@
 					</div>
 				</div>
 			</div> -->
-			<div>
-				<h2 class="pb-1">Photos</h2>
-				<div id="bigNoiseSlider" class="carousel" data-ride="carousel">
+		<section>
+			<h2 class="pb-1">Photos</h2>
+			<div id="bigNoiseSlider" class="carousel" data-ride="carousel">
 
-					<!-- Indicators -->
-					<!-- <ul class="carousel-indicators">
+				<!-- Indicators -->
+				<!-- <ul class="carousel-indicators">
 						<li data-target="#bigNoiseSlider" data-slide-to="0" class="active"></li>
 						<li data-target="#bigNoiseSlider" data-slide-to="1"></li>
 						<li data-target="#bigNoiseSlider" data-slide-to="2"></li>
@@ -69,12 +63,10 @@
 						<li data-target="#bigNoiseSlider" data-slide-to="9"></li>
 					</ul> -->
 
-					<!-- The slideshow -->
-					<div class="carousel-inner">
-						<div class="carousel-item active">
-							<img src="https://www.bard.edu/bardmakesnoise/images/steelydan/steelydan.png" alt="Donald Fagen article in the Bard Observer, May 28, 1985" data-toggle="modal" data-target="#lsImg2">
-						</div>
-						<!-- <div class="carousel-item">
+				<!-- The slideshow -->
+				<div class="carousel-inner">
+					<?php carouselImage("steelydan/steelydan.png", "Donald Fagen article in the Bard Observer, May 28, 1985", 2) ?>
+					<!-- <div class="carousel-item">
 							<img src="https://www.bard.edu/bardmakesnoise/images/bobafett/CotF.jpg" alt="Boba Fett/CotF live" data-toggle="modal" data-target="#lsImg3">
 						</div>
 						<div class="carousel-item">
@@ -101,9 +93,9 @@
 						<div class="carousel-item">
 							<img src="https://www.bard.edu/bardmakesnoise/images/showflyers/WendellSRebelYBobaF.jpg" alt="Show Flyer" data-toggle="modal" data-target="#lsImg11">
 						</div> -->
-					</div>
+				</div>
 
-					<!-- Left and right controls 
+				<!-- Left and right controls
 					<a class="carousel-control-prev" href="#bigNoiseSlider" data-slide="prev">
 						<span class="carousel-control-prev-icon"></span>
 					</a>
@@ -111,27 +103,13 @@
 						<span class="carousel-control-next-icon"></span>
 					</a>-->
 
-				</div>
 			</div>
-		</div>
-	</div>
-
-	<!-- Flyer -->
-	<div class="modal" id="lsImg2">
-		<div class="modal-dialog-mod">
-			<div class="modal-content" style="width: 50%; margin: auto;">
-				<!-- Modal Header -->
-				<div class="modal-header">
-					<h4 class="modal-title">Donald Fagen article in the Bard Observer, May 28, 1985</h4>
-					<button type="button" class="close" data-dismiss="modal">&times;</button>
-				</div>
-				<!-- Modal body -->
-				<div class="modal-body d-flex justify-content-center">
-					<img src="https://www.bard.edu/bardmakesnoise/images/steelydan/steelydan.png" class="img-fluid" alt="Donald Fagen article in the Bard Observer, May 28, 1985" data-toggle="modal" data-target="#lsImg2">
-				</div>
-			</div>
-		</div>
-	</div>
+		</section>
+	</aside>
+</div>
 <?php
-	$page->close();
+// Pop-up image links
+modalPopUp(2, "Donald Fagen article in the Bard Observer, May 28, 1985", "steelydan/steelydan.png", "Donald Fagen article in the Bard Observer, May 28, 1985");
+
+$page->close();
 ?>

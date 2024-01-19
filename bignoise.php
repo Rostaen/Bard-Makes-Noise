@@ -34,47 +34,31 @@ responsiveImageCSS();
 			displayMusic($musicData);
 			?>
 		</section>
-		<section>
-			<h2 class="pb-1">Photos</h2>
-			<div id="bigNoiseSlider" class="carousel" data-ride="carousel">
-
-				<!-- Indicators -->
-				<ul class="carousel-indicators">
-					<?php carouselIndicators(15); ?>
-				</ul>
-
-				<!-- The slideshow -->
-				<div class="carousel-inner">
-					<?php
-					$carouselData = [
-						["bignoise/bignoiseposter.jpg", "Big Noise Flyer"],
-						["bignoise/bignoise1.jpg", "Big Noise Live Performance"],
-						["bignoise/bignoise-sottery.jpg", "Big Noise at Sottery"],
-						["bignoise/bignoise2.jpg", "Big Noise live"],
-						["bignoise/bignoise4.jpg", "Color photo of guitarist and drummer"],
-						["bignoise/bignoise5.jpg", "Big Noise live"],
-						["bignoise/bignoise6.jpg", "Promotional shots of Big Noise"],
-						["bignoise/bignoise7.jpg", "Nelson Bragg live with Big Noise"],
-						["bignoise/bignoise8.jpg", "Brian Buford OSullivan"],
-						["bignoise/bignoise9.jpg", "Peter Buettner"],
-						["bignoise/bignoise10.jpg", "Big Noise group rehearsal"],
-						["showflyers/bignoiseposter1.jpg", "Show Flyer"],
-						["showflyers/bignoiseposter2.jpg", "Show Flyer"],
-						["showflyers/bignoiseposter3.jpg", "Show Flyer"],
-						["showflyers/bignoiseposter4.jpg", "Show Flyer"],
-					];
-					displayImages($carouselData);
-					?>
-				</div>
-
-				<!-- Left and right controls -->
-				<?php carouselControls(); ?>
-
-			</div>
-		</section>
+		<?php
+		// Displaying Indicators, Images, and Controls
+		$carouselData = [
+			["bignoise/bignoiseposter.jpg", "Big Noise Flyer"],
+			["bignoise/bignoise1.jpg", "Big Noise Live Performance"],
+			["bignoise/bignoise-sottery.jpg", "Big Noise at Sottery"],
+			["bignoise/bignoise2.jpg", "Big Noise live"],
+			["bignoise/bignoise4.jpg", "Color photo of guitarist and drummer"],
+			["bignoise/bignoise5.jpg", "Big Noise live"],
+			["bignoise/bignoise6.jpg", "Promotional shots of Big Noise"],
+			["bignoise/bignoise7.jpg", "Nelson Bragg live with Big Noise"],
+			["bignoise/bignoise8.jpg", "Brian Buford OSullivan"],
+			["bignoise/bignoise9.jpg", "Peter Buettner"],
+			["bignoise/bignoise10.jpg", "Big Noise group rehearsal"],
+			["showflyers/bignoiseposter1.jpg", "Show Flyer"],
+			["showflyers/bignoiseposter2.jpg", "Show Flyer"],
+			["showflyers/bignoiseposter3.jpg", "Show Flyer"],
+			["showflyers/bignoiseposter4.jpg", "Show Flyer"],
+		];
+		displayCarousel($carouselData);
+		?>
 	</aside>
 </div>
 <?php
+// Pop-up image links
 $modalData = [
 	["Big Noise Flyer", "bignoise/bignoiseposter.jpg", "Big Noise Flyer"],
 	["Big Noise Live Performance", "bignoise/bignoise1.jpg", "Big Noise Live Performance"],

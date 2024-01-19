@@ -36,40 +36,25 @@ responsiveImageCSS();
 				?>
 			</div>
 		</section>
-		<section>
-			<h2 class="pb-1">Photos</h2>
-			<div id="bigNoiseSlider" class="carousel" data-ride="carousel">
-
-				<!-- Indicators -->
-				<ul class="carousel-indicators">
-					<?php carouselIndicators(7); ?>
-				</ul>
-
-				<!-- The slideshow -->
-				<div class="carousel-inner">
-					<?php
-					$carouselData = [
-						["bloodpony/bloodpony1.jpg", "Blood Pony promotional shot"],
-						["bloodpony/bloodpony2.jpg", "Blood Pony live"],
-						["bloodpony/bloodpony3.jpg", "Blood Pony live @ SMOG"],
-						["bloodpony/bloodpony4.jpg", "Blood Pony live @ SMOG"],
-						["bloodpony/bloodpony5.jpg", "Blood Pony promotional shot"],
-						["bloodypony-poster1.jpg", "Show Flyer"],
-						["bloodypony-poster2.jpg", "Show Flyer"],
-					];
-					?>
-				</div>
-
-				<!-- Left and right controls -->
-				<?php carouselControls(); ?>
-
-			</div>
-		</section>
+		<?php
+		// Displaying Indicators, Images, and Controls
+		$carouselData = [
+			["bloodpony/bloodpony1.jpg", "Blood Pony promotional shot"],
+			["bloodpony/bloodpony2.jpg", "Blood Pony live"],
+			["bloodpony/bloodpony3.jpg", "Blood Pony live @ SMOG"],
+			["bloodpony/bloodpony4.jpg", "Blood Pony live @ SMOG"],
+			["bloodpony/bloodpony5.jpg", "Blood Pony promotional shot"],
+			["bloodypony-poster1.jpg", "Show Flyer"],
+			["bloodypony-poster2.jpg", "Show Flyer"],
+		];
+		displayCarousel($carouselData);
+		?>
 	</aside>
 </div>
 
 <!-- Carousel Images -->
 <?php
+// Pop-up image links
 $modalData = [
 	["Blood Pony promotional shot", "bloodpony/bloodpony1.jpg", "Blood Pony promotional shot"],
 	["Blood Pony live", "bloodpony/bloodpony2.jpg", "Blood Pony live"],

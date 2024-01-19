@@ -52,39 +52,23 @@ responsiveImageCSS();
 			musicFile("Afternoon Delight", "https://drive.google.com/file/d/1ZVcIl59518mk_nMY_GwFliioZfpxw8cL/preview?usp=sharing");
 			?>
 		</section>
-		<section class="pb-4">
-			<h2 class="pb-1">Photos</h2>
-			<div id="bigNoiseSlider" class="carousel" data-ride="carousel">
-
-				<!-- Indicators -->
-				<ul class="carousel-indicators">
-					<?php carouselIndicators(5); ?>
-				</ul>
-
-				<!-- The slideshow -->
-				<div class="carousel-inner">
-					<?php
-					$carouselData = [
-						["1973/1973a.jpg", "1973 live in the late 80s"],
-						["1973/1973b.jpg", "1973 live in Kline Commons"],
-						["1973/1973poster3.jpg", "1973 Poster"],
-						["showflyers/1973poster.jpg", "Show Flyer"],
-						["showflyers/1973poster2.jpg", "Show Flyer"],
-					];
-					displayImages($carouselData);
-					?>
-				</div>
-
-				<!-- Left and right controls -->
-				<?php carouselControls(); ?>
-
-			</div>
-		</section>
+		<?php
+		// Displaying Indicators, Images, and Controls
+		$carouselData = [
+			["1973/1973a.jpg", "1973 live in the late 80s"],
+			["1973/1973b.jpg", "1973 live in Kline Commons"],
+			["1973/1973poster3.jpg", "1973 Poster"],
+			["showflyers/1973poster.jpg", "Show Flyer"],
+			["showflyers/1973poster2.jpg", "Show Flyer"],
+		];
+		displayCarousel($carouselData);
+		?>
 	</aside>
 </div>
 
 <!-- Flyer -->
 <?php
+// Pop-up image links
 $modalData = [
 	["1973 live in the late 80s", "1973/1973a.jpg", "1973 live in the late 80s"],
 	["1973 live in Kline Commons", "1973/1973b.jpg", "1973 live in Kline Commons"],

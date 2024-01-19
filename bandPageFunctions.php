@@ -1,4 +1,5 @@
 <?php
+// Special CSS used to ensure images are responsive
 function responsiveImageCSS()
 {
     echo '
@@ -11,6 +12,7 @@ function responsiveImageCSS()
     </style>';
 }
 
+// Displaying a single vidoe link
 function videoFile($title, $url)
 {
     echo '
@@ -23,12 +25,14 @@ function videoFile($title, $url)
     ';
 }
 
+// Displaying multiple video links
 function displayVideos($videoData)
 {
     for ($x = 0; $x < count($videoData); $x++)
         videoFile($videoData[$x][0], $videoData[$x][1]);
 }
 
+// Displaying a single music file
 function musicFile($title, $url)
 {
     echo '
@@ -48,6 +52,7 @@ function musicFile($title, $url)
     ';
 }
 
+// Displaying a single music file with subtitle
 function musicFileWithSubtitle($title, $url, $subtitle)
 {
     echo '
@@ -68,12 +73,14 @@ function musicFileWithSubtitle($title, $url, $subtitle)
     ';
 }
 
+// Displaying multiple music files
 function displayMusic($musicData)
 {
     for ($x = 0; $x < count($musicData); $x++)
         musicFile($musicData[$x][0], $musicData[$x][1]);
 }
 
+// Displaying a basic carousel image
 function basicImage($url, $alt, $imgNumber)
 {
     echo '
@@ -83,22 +90,27 @@ function basicImage($url, $alt, $imgNumber)
     ';
 }
 
+// Displaying all basic carousel images
 function displayBasicImg($imageData)
 {
     for ($x = 0; $x < count($imageData); $x++)
         basicImage($imageData[$x][0], $imageData[$x][1], $x + 1);
 }
 
+// Displaying carousel indicators for image navigation
 function carouselIndicators($num)
 {
+    echo '<ul class="carousel-indicators">';
     for ($x = 0; $x < $num; $x++) {
         if ($x > 0)
             echo '<li data-target="#bigNoiseSlider" data-slide-to="' . $num . '"></li>';
         else
             echo '<li data-target="#bigNoiseSlider" data-slide-to="' . $x . '" class="active"></li>';
     }
+    echo '</ul>';
 }
 
+// Displaying first carousel image that is active
 function carouselImageFirst($url, $alt, $imgNumber)
 {
     echo '
@@ -108,6 +120,7 @@ function carouselImageFirst($url, $alt, $imgNumber)
     ';
 }
 
+// Displaying carousel image that is not initiall active
 function carouselImage($url, $alt, $imgNumber)
 {
     echo '
@@ -117,6 +130,7 @@ function carouselImage($url, $alt, $imgNumber)
     ';
 }
 
+// Logic to display the first image or the rest of the images in a carousel
 function displayImages($carouselData)
 {
     for ($x = 0; $x < count($carouselData); $x++) {
@@ -127,6 +141,7 @@ function displayImages($carouselData)
     }
 }
 
+// Displaying controls for the carousel
 function carouselControls()
 {
     echo '
@@ -139,6 +154,23 @@ function carouselControls()
     ';
 }
 
+// Display the entire carousel
+function displayCarousel($carouselData)
+{
+    echo '
+        <section class="pb-4">
+            <h2 class="pb-1">Photos</h2>
+            <div id="bigNoiseSlider" class="carousel" data-ride="carousel">';
+    carouselIndicators(count($carouselData));
+    echo '
+        <div class="carousel-inner">';
+    displayImages($carouselData);
+    echo '</div>';
+    carouselControls();
+    echo '</div></section>';
+}
+
+// Displaying a modal image pop-up when clicked on screen
 function modalPopUp($number, $title, $url, $alt)
 {
     echo '
@@ -160,6 +192,7 @@ function modalPopUp($number, $title, $url, $alt)
     ';
 }
 
+// Displaying all modal pop-up links
 function displayModal($modalData)
 {
     for ($x = 0; $x < count($modalData); $x++)

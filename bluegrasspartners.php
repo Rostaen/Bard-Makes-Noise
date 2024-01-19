@@ -28,32 +28,19 @@ responsiveImageCSS();
 		</p>
 	</section>
 	<aside class="col-lg-4">
-		<section class="pb-4">
-			<h2 class="pb-1">Photos</h2>
-			<div id="bigNoiseSlider" class="carousel" data-ride="carousel">
-				<ul class="carousel-indicators">
-					<?php carouselIndicators(2); ?>
-				</ul>
-				<!-- The slideshow -->
-				<div class="carousel-inner">
-					<?php
-					$carouselData = [
-						["bluegrasspartners/observer3-21-67.jpg", "Bard Observer article on Bluegrass Partners"],
-						["bluegrasspartners/bluegrass partners chip.jpg", "CHG [Christopher Haden-Guest] and the Bluegrass Partners (Photo courtesy of Brian Nielsen)"],
-					];
-					displayImages($carouselData);
-					?>
-				</div>
-
-
-				<!-- Left and right controls -->
-				<?php carouselControls(); ?>
-			</div>
-		</section>
+		<?php
+		// Displaying Indicators, Images, and Controls
+		$carouselData = [
+			["bluegrasspartners/observer3-21-67.jpg", "Bard Observer article on Bluegrass Partners"],
+			["bluegrasspartners/bluegrass partners chip.jpg", "CHG [Christopher Haden-Guest] and the Bluegrass Partners (Photo courtesy of Brian Nielsen)"],
+		];
+		displayCarousel($carouselData);
+		?>
 	</aside>
 </div>
 
 <?php
+// Pop-up image links
 $modalData = [
 	["Skip Strong's Steamboat Six", "bluegrasspartners/observer3-21-67.jpg", "Bard Observer article on Bluegrass Partners"],
 	["CHG [Christopher Haden-Guest] and the Bluegrass Partners (Photo courtesy of Brian Nielsen)", "bluegrasspartners/bluegrass partners chip.jpg", "CHG [Christopher Haden-Guest] and the Bluegrass Partners (Photo courtesy of Brian Nielsen)"],

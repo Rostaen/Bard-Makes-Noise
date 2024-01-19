@@ -35,42 +35,26 @@ responsiveImageCSS();
 			displayMusic($musicData);
 			?>
 		</section>
-		<section>
-			<h2 class="pb-1">Photos</h2>
-			<div id="bigNoiseSlider" class="carousel" data-ride="carousel">
-
-				<!-- Indicators -->
-				<ul class="carousel-indicators">
-					<?php carouselIndicators(10); ?>
-				</ul>
-
-				<!-- The slideshow -->
-				<div class="carousel-inner">
-					<?php
-					$carouselData = [
-						["bobafett/cotfcollage.jpg", "Boba Fett/CotF promo shots"],
-						["bobafett/CotF.jpg", "Boba Fett/CotF live"],
-						["bobafett/bobafett1BF", "Aaron Diskin and Nick Zinner with Boba Fett live in Tivoli"],
-						["bobafett/bobafett2BF", "Boba Fett live in Tivoli"],
-						["bobafett/aaron-oldgym.jpg", "Aaron Diskin with Boba Fett/CotF"],
-						["bobafett/aaron-oldgym2.jpg", "Boba Fett/CotF live"],
-						["bobafett/bobafett-nyc.jpg", "Challenge of the Future live"],
-						["bobafett/nickguitar.jpg", "Nick Zinner's guitar and effects pedals"],
-						["bobafett/bobafett95.jpg", "Boba Fett live on campus"],
-						["showflyers/WendellSRebelYBobaF.jpg", "Show Flyer"],
-					];
-					displayImages($carouselData);
-					?>
-				</div>
-
-				<!-- Left and right controls -->
-				<?php carouselControls(); ?>
-
-			</div>
-		</section>
+		<?php
+		// Displaying Indicators, Images, and Controls
+		$carouselData = [
+			["bobafett/cotfcollage.jpg", "Boba Fett/CotF promo shots"],
+			["bobafett/CotF.jpg", "Boba Fett/CotF live"],
+			["bobafett/bobafett1BF", "Aaron Diskin and Nick Zinner with Boba Fett live in Tivoli"],
+			["bobafett/bobafett2BF", "Boba Fett live in Tivoli"],
+			["bobafett/aaron-oldgym.jpg", "Aaron Diskin with Boba Fett/CotF"],
+			["bobafett/aaron-oldgym2.jpg", "Boba Fett/CotF live"],
+			["bobafett/bobafett-nyc.jpg", "Challenge of the Future live"],
+			["bobafett/nickguitar.jpg", "Nick Zinner's guitar and effects pedals"],
+			["bobafett/bobafett95.jpg", "Boba Fett live on campus"],
+			["showflyers/WendellSRebelYBobaF.jpg", "Show Flyer"],
+		];
+		displayCarousel($carouselData);
+		?>
 	</aside>
 </div>
 <?php
+// Pop-up image links
 $modalData = [
 	["Boba Fett/CotF promo shots", "bobafett/cotfcollage.jpg", "Boba Fett/CotF promo shots"],
 	["Boba Fett/CotF live", "bobafett/CotF.jpg", "Boba Fett/CotF live"],
