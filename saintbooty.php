@@ -27,7 +27,7 @@ responsiveImageCSS();
 		displayMusic($musicData);
 
 		// Displaying Indicators, Images, and Controls
-		displayImages($carouselData);
+		displayCarousel($carouselData);
 		?>
 	</aside>
 </div>

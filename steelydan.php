@@ -66,7 +66,7 @@ responsiveImageCSS();
 
 				<!-- The slideshow -->
 				<div class="carousel-inner">
-					<?php carouselImage("steelydan/steelydan.png", "Donald Fagen article in the Bard Observer, May 28, 1985", 2) ?>
+					<?php carouselImage("steelydan/steelydan.png", "Donald Fagen article in the Bard Observer, May 28, 1985", 2, "active") ?>
 					<!-- <div class="carousel-item">
 							<img src="https://www.bard.edu/bardmakesnoise/images/bobafett/CotF.jpg" alt="Boba Fett/CotF live" data-toggle="modal" data-target="#lsImg3">
 						</div>

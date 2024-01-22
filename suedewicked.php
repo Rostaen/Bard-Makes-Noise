@@ -1,7 +1,7 @@
 <?php
 require_once("template.php");
 include_once("bandPageFunctions.php");
-include_once("bandPageData/suedewicked.php");
+include_once("bandPageData/suedWickedData.php");
 $page = new Template();
 $page->setTitle('Suede Wicked | Bands of Bard | Bard Makes Noise');
 $page->setMetaKW('');
