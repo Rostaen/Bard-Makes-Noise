@@ -9,4 +9,4 @@ $musicData = [
     ["Unhealthy", "https://drive.google.com/file/d/1gZufaOkioD5DzzKCoTl43JlbrqrB8NeF/preview?usp=sharing"],
 ];
 
-//musicFileWithSubtitle("Unhealthy", "https://drive.google.com/file/d/1gZufaOkioD5DzzKCoTl43JlbrqrB8NeF/preview?usp=sharing", "Songs from the Old Gym 2");
+//musicFile("Unhealthy", "https://drive.google.com/file/d/1gZufaOkioD5DzzKCoTl43JlbrqrB8NeF/preview?usp=sharing", "Songs from the Old Gym 2");

@@ -9,7 +9,7 @@ $page->setMetaDesc('');
 
 // print page header
 $page->open();
-responsiveImageCSS();
+//responsiveImageCSS();
 ?>
 <div class="row lt-gray">
 	<section class="col-lg-8">

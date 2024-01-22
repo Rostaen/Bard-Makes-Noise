@@ -80,8 +80,8 @@ responsiveImageCSS();
 		<section class="pb-3">
 			<h2 class="pb-1">Music</h2>
 			<?php
-			musicFileWithSubtitle("Fast Funk", "https://drive.google.com/file/d/1-szKEDvQBjW3-QM7BfBG3yDuPsspRS7-/preview?usp=sharing", "Recorded live to cassette by Gary Mosca and Matt Hill in Bard Music Studio February 26, 1987");
-			musicFileWithSubtitle("Flight Back", "https://drive.google.com/file/d/18KI4fxe-5Qa06qW2VWjk-cvdTa9AltoE/preview?usp=sharing", "Live in Bard Hall December 6, 1986");
+			musicFile("Fast Funk", "https://drive.google.com/file/d/1-szKEDvQBjW3-QM7BfBG3yDuPsspRS7-/preview?usp=sharing", "Recorded live to cassette by Gary Mosca and Matt Hill in Bard Music Studio February 26, 1987");
+			musicFile("Flight Back", "https://drive.google.com/file/d/18KI4fxe-5Qa06qW2VWjk-cvdTa9AltoE/preview?usp=sharing", "Live in Bard Hall December 6, 1986");
 			?>
 			<div class="mb-3">
 				<iframe width="100%" height="150" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/90617247&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>

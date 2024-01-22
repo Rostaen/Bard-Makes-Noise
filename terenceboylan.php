@@ -22,7 +22,7 @@ responsiveImageCSS();
 	<aside class="col-lg-4 pb-3">
 		<?php
 		// Displaying Music section
-		displayMusic($musicData, 1);
+		displayMusic($musicData);
 
 		// Displaying Indicators, Images, and Controls
 		displayCarousel($carouselData);

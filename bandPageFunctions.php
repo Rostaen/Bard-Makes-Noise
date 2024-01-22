@@ -1,5 +1,8 @@
 <?php
-// Special CSS used to ensure images are responsive
+
+/**
+ * Special CSS used to ensure images are responsive *
+ */
 function responsiveImageCSS()
 {
     echo '
@@ -11,8 +14,12 @@ function responsiveImageCSS()
         }
     </style>';
 }
-
-// Displaying a single vidoe link
+/**
+ * Displaying a single vidoe link with HTML elements.
+ *
+ * @param string $title The title of the video file.
+ * @param string $url The full URL for where the video is being stored.
+ */
 function videoFile($title, $url)
 {
     echo '
@@ -25,7 +32,11 @@ function videoFile($title, $url)
     ';
 }
 
-// Displaying multiple video links
+/**
+ * Printing HTML elements and displaying multiple video links from an array via the videoFile function call.
+ *
+ * @param array $videoData An array of elements used for the videoFile function call.
+ */
 function displayVideos($videoData)
 {
     echo '
@@ -36,13 +47,21 @@ function displayVideos($videoData)
     echo '</section>';
 }
 
-// Displaying a single music file
-function musicFile($title, $url)
+/**
+ * Printing HTML elements and using passed data to fill out unrepeated spots.
+ *
+ * @param string $title The title for the music file.
+ * @param string $url The full URL for where the music file is being stored.
+ * @param string $subTitle An optional field for when a musicFile has a sub title.
+ */
+function musicFile($title, $url, $subTitle = '')
 {
     echo '
         <div class="pb-3">
-            <h3>' . $title . '</h3>
-            <div style="width: 100%; height: 100px; position: relative;">
+            <h3>' . $title . '</h3>';
+    if ($subTitle != '')
+        echo '<p>' . $subTitle . '</p>';
+    echo ' <div style="width: 100%; height: 100px; position: relative;">
                 <iframe
                     frameborder="0"
                     width="100%"
@@ -56,43 +75,29 @@ function musicFile($title, $url)
     ';
 }
 
-// Displaying a single music file with subtitle
-function musicFileWithSubtitle($title, $url, $subtitle)
-{
-    echo '
-        <div class="pb-3">
-            <h3>' . $title . '</h3>
-            <p>' . $subtitle . '</p>
-            <div style="width: 100%; height: 100px; position: relative;">
-                <iframe
-                    frameborder="0"
-                    width="100%"
-                    height="100"
-                    title="Band MP3"
-                    src="' . $url . '">
-                </iframe>
-                <div style="width: 53px; height: 55px; position: absolute; opacity: 0; right: 0px; top: 0px;">&nbsp;</div>
-            </div>
-        </div>
-    ';
-}
-
-// Displaying multiple music files
-function displayMusic($musicData, $subTitle = 0)
+/**
+ * Printing HTML elements and displaying multiple music files
+ *
+ * @param array $musicData An array of music variables, array location 2 is sometimes set.
+ */
+function displayMusic($musicData)
 {
     echo '
     <section class="pb-3">
         <h2 class="pb-1">Music</h2>';
     for ($x = 0; $x < count($musicData); $x++) {
-        if ($subTitle == 0)
-            musicFile($musicData[$x][0], $musicData[$x][1]);
-        else
-            musicFileWithSubtitle($musicData[$x][0], $musicData[$x][1], $musicData[$x][2]);
+        musicFile($musicData[$x][0], $musicData[$x][1], isset($musicData[$x][2]) ? $musicData[$x][2] : '');
     }
     echo '</section>';
 }
 
-// Displaying a basic carousel image
+/**
+ * Printing HTML elements and displaying a basic carousel image
+ *
+ * @param string $url Ending URI for the image location.
+ * @param string $alt Alt information for the image.
+ * @param int $imgNumber Image number for pop-up reference in the modal section.
+ */
 function basicImage($url, $alt, $imgNumber)
 {
     echo '
@@ -102,58 +107,65 @@ function basicImage($url, $alt, $imgNumber)
     ';
 }
 
-// Displaying all basic carousel images
+/**
+ * Displaying all basic carousel images
+ *
+ * @param array $imageData An array of information to print the image in a carousel
+ */
 function displayBasicImg($imageData)
 {
     for ($x = 0; $x < count($imageData); $x++)
         basicImage($imageData[$x][0], $imageData[$x][1], $x + 1);
 }
 
-// Displaying carousel indicators for image navigation
+/**
+ * Printing HTML elements and displaying carousel indicators for image navigation
+ *
+ * @param int $num The number of carousel indicators to display.
+ */
 function carouselIndicators($num)
 {
     echo '<ul class="carousel-indicators">';
     for ($x = 0; $x < $num; $x++) {
-        if ($x > 0)
-            echo '<li data-target="#bigNoiseSlider" data-slide-to="' . $num . '"></li>';
-        else
-            echo '<li data-target="#bigNoiseSlider" data-slide-to="' . $x . '" class="active"></li>';
+        $activeClass = ($x == 0) ? 'active' : '';
+        echo '<li data-target="#bigNoiseSlider" data-slide-to="' . $x . '" class="' . $activeClass . '"></li>';
     }
     echo '</ul>';
 }
 
-// Displaying first carousel image that is active
-function carouselImageFirst($url, $alt, $imgNumber)
+/**
+ * Prints HTML elements and displaying carousel image
+ *
+ * @param string $url Ending URI for the image location.
+ * @param string $alt Alt information for the image.
+ * @param int $imgNumber Number associated to the modal to make pop-up images.
+ * @param string $active A class item to let Bootstrap know this is the active item or not.
+ */
+function carouselImage($url, $alt, $imgNumber, $active)
 {
     echo '
-    <div class="carousel-item active">
+    <div class="carousel-item ' . $active . '">
         <img src="https://www.bard.edu/bardmakesnoise/images/' . $url . '" alt="' . $alt . '" data-toggle="modal" data-target="#lsImg' . $imgNumber . '">
     </div>
     ';
 }
 
-// Displaying carousel image that is not initiall active
-function carouselImage($url, $alt, $imgNumber)
-{
-    echo '
-    <div class="carousel-item">
-        <img src="https://www.bard.edu/bardmakesnoise/images/' . $url . '" alt="' . $alt . '" data-toggle="modal" data-target="#lsImg' . $imgNumber . '">
-    </div>
-    ';
-}
-
-// Logic to display the first image or the rest of the images in a carousel
+/**
+ * Displays the images in a carousel
+ *
+ * @param array $carouselData An array of image information to be displayed in a carousel.
+ */
 function displayImages($carouselData)
 {
     for ($x = 0; $x < count($carouselData); $x++) {
-        if ($x == 0)
-            carouselImageFirst($carouselData[$x][0], $carouselData[$x][1], $x + 1);
-        else
-            carouselImage($carouselData[$x][0], $carouselData[$x][1], $x + 1);
+        $activeClass = ($x == 0) ? 'active' : '';
+        carouselImage($carouselData[$x][0], $carouselData[$x][1], $x + 1, $activeClass);
     }
 }
 
-// Displaying controls for the carousel
+/**
+ * HTML elements to displays controls for the carousel.
+ */
 function carouselControls()
 {
     echo '
@@ -166,7 +178,11 @@ function carouselControls()
     ';
 }
 
-// Display the entire carousel
+/**
+ * HTML elements and displaying the entire carousel with function calls.
+ *
+ * @param array $carouselData An array to be passed to the appropriate functions.
+ */
 function displayCarousel($carouselData)
 {
     echo '
@@ -182,7 +198,14 @@ function displayCarousel($carouselData)
     echo '</div></section>';
 }
 
-// Displaying a modal image pop-up when clicked on screen
+/**
+ * HTML elements and displaying a modal image pop-up when clicked on screen.
+ *
+ * @param int $number The number associated with the image in the carousel to pop-up when clicked.
+ * @param string $title The image title.
+ * @param string $url The ending URI for the image location for the pop-up.
+ * @param string $alt Alt information for the image.
+ */
 function modalPopUp($number, $title, $url, $alt)
 {
     echo '
@@ -204,7 +227,11 @@ function modalPopUp($number, $title, $url, $alt)
     ';
 }
 
-// Displaying all modal pop-up links
+/**
+ * Displaying all modal pop-up links with a function call to modalPopUp.
+ *
+ * @param array $modalData An array of information for the modal pop-up.
+ */
 function displayModal($modalData)
 {
     for ($x = 0; $x < count($modalData); $x++)
