@@ -28,8 +28,12 @@ function videoFile($title, $url)
 // Displaying multiple video links
 function displayVideos($videoData)
 {
+    echo '
+    <section class="mb-3">
+        <h2 class="mb-1">Videos</h2>';
     for ($x = 0; $x < count($videoData); $x++)
         videoFile($videoData[$x][0], $videoData[$x][1]);
+    echo '</section>';
 }
 
 // Displaying a single music file
@@ -74,10 +78,18 @@ function musicFileWithSubtitle($title, $url, $subtitle)
 }
 
 // Displaying multiple music files
-function displayMusic($musicData)
+function displayMusic($musicData, $subTitle = 0)
 {
-    for ($x = 0; $x < count($musicData); $x++)
-        musicFile($musicData[$x][0], $musicData[$x][1]);
+    echo '
+    <section class="pb-3">
+        <h2 class="pb-1">Music</h2>';
+    for ($x = 0; $x < count($musicData); $x++) {
+        if ($subTitle == 0)
+            musicFile($musicData[$x][0], $musicData[$x][1]);
+        else
+            musicFileWithSubtitle($musicData[$x][0], $musicData[$x][1], $musicData[$x][2]);
+    }
+    echo '</section>';
 }
 
 // Displaying a basic carousel image

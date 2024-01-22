@@ -54,7 +54,7 @@ responsiveImageCSS();
 
 <!-- Carousel Images -->
 <?php
-// Pop-up image links
+// Displaying Modal Section
 $modalData = [
 	["Blood Pony promotional shot", "bloodpony/bloodpony1.jpg", "Blood Pony promotional shot"],
 	["Blood Pony live", "bloodpony/bloodpony2.jpg", "Blood Pony live"],

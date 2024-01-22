@@ -22,11 +22,8 @@ responsiveImageCSS();
 			<h2 class="mb-1">Videos</h2>
 			<?php videoFile("Bard Hall 2008", "https://drive.google.com/file/d/1tdA_lymxTmBecUEpkle4_jZGiOOYfwbH/preview?usp=sharing"); ?>
 		</section>
-		<section class="pb-3">
-			<h2 class="pb-1">Music</h2>
-			<?php musicFile("The Day Will Come", "https://drive.google.com/file/d/1HGtIaOjizLIGnpQ8m2sYrX4OqEvypJv9/preview?usp=sharing"); ?>
-		</section>
-		<?php
+
+		<?php musicFile("The Day Will Come", "https://drive.google.com/file/d/1HGtIaOjizLIGnpQ8m2sYrX4OqEvypJv9/preview?usp=sharing");
 		// Displaying Indicators, Images, and Controls
 		$carouselData = [
 			["sparrows/sparrows1.jpg", "The Sparrow promotional photo"],

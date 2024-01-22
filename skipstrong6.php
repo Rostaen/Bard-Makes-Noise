@@ -39,7 +39,7 @@ responsiveImageCSS();
 </div>
 </div>
 <?php
-// Pop-up image links
+// Displaying Modal Section
 modalPopUp(1, "Skip Strong's Steamboat Six", "skipstong6/skipstrong6.jpg", "Group photo of the band holding instruments");
 
 $page->close();

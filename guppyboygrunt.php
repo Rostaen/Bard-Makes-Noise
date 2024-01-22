@@ -27,18 +27,15 @@ responsiveImageCSS();
 		</p>
 	</section>
 	<aside class="col-lg-4 pb-3">
-		<section class="pb-3">
-			<h2 class="pb-1">Music</h2>
-			<?php
-			$musicData = [
-				["All Fall Down", "https://drive.google.com/file/d/1lGL9OL9WsbcCbWA-FKbhJ-slraVa6p5a/preview?usp=sharing"],
-				["Captain of the Day", "https://drive.google.com/file/d/1j-WBkMOKl7VdIWz1Sp-A0fao6dKKrhdF/preview?usp=sharing"],
-				["Hitch Hiker", "https://drive.google.com/file/d/1BBiW3PRCAJEnxMZYDv9UBoNHnnx8v5qT/preview?usp=sharing"],
-			];
-			displayMusic($musicData);
-			?>
-		</section>
+
 		<?php
+		$musicData = [
+			["All Fall Down", "https://drive.google.com/file/d/1lGL9OL9WsbcCbWA-FKbhJ-slraVa6p5a/preview?usp=sharing"],
+			["Captain of the Day", "https://drive.google.com/file/d/1j-WBkMOKl7VdIWz1Sp-A0fao6dKKrhdF/preview?usp=sharing"],
+			["Hitch Hiker", "https://drive.google.com/file/d/1BBiW3PRCAJEnxMZYDv9UBoNHnnx8v5qT/preview?usp=sharing"],
+		];
+		displayMusic($musicData);
+
 		// Displaying Indicators, Images, and Controls
 		$carouselData = [
 			["gbg/GBG1.jpg", "Guppy Boy Grunt live on campus"],
@@ -51,7 +48,7 @@ responsiveImageCSS();
 </div>
 
 <?php
-// Pop-up image links
+// Displaying Modal Section
 $modalData = [
 	["Guppy Boy Grunt live on campus", "gbg/GBG1.jpg", "Guppy Boy Grunt live on campus"],
 	["Guppy Boy Grunt live on campus", "gbg/GBG2.jpg", "Guppy Boy Grunt live on campus"],

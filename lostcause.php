@@ -41,7 +41,7 @@ responsiveImageCSS();
 	</aside>
 </div>
 <?php
-// Pop-up image links
+// Displaying Modal Section
 modalPopUp(2, "Lost Cause live at Manor", "lostcause/lostcause.jpg", "Lost Cause live at Manor");
 
 $page->close();

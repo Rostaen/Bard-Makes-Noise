@@ -18,19 +18,18 @@ responsiveImageCSS();
 		</p>
 	</section>
 	<aside class="col-lg-4 pb-3">
-		<section class="pb-3">
-			<h2 class="pb-1">Music</h2>
-			<?php
-			$musicData = [
-				["Black Is The Color MP3", "https://drive.google.com/file/d/1It1Ju8c5Zaf3MrsqtL9qGZcQoRbIPhG4/preview?usp=sharing"],
-				["Evil (with <a href=\"http://en.wikipedia.org/wiki/Jeanne_Lee\" target=\"_blank\">Jeanne Lee</a>)", "https://drive.google.com/file/d/1dbAdrdXzBikgGYiu5LAwmuBAEeKp5r2_/preview?usp=sharing"],
-			];
-			displayMusic($musicData);
-			?>
-			<h2 class="pb-1">Photos</h2>
-			<?php
-			basicImage("bardjazzfest/guyducornet.jpg", "Guy Ducornet playing saxiphone during the Bard Jazz Festival", 1);
-			?>
+
+		<?php
+		$musicData = [
+			["Black Is The Color MP3", "https://drive.google.com/file/d/1It1Ju8c5Zaf3MrsqtL9qGZcQoRbIPhG4/preview?usp=sharing"],
+			["Evil (with <a href=\"http://en.wikipedia.org/wiki/Jeanne_Lee\" target=\"_blank\">Jeanne Lee</a>)", "https://drive.google.com/file/d/1dbAdrdXzBikgGYiu5LAwmuBAEeKp5r2_/preview?usp=sharing"],
+		];
+		displayMusic($musicData);
+		?>
+		<h2 class="pb-1">Photos</h2>
+		<?php
+		basicImage("bardjazzfest/guyducornet.jpg", "Guy Ducornet playing saxiphone during the Bard Jazz Festival", 1);
+		?>
 		</section>
 	</aside>
 </div>

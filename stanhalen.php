@@ -24,11 +24,8 @@ responsiveImageCSS();
 		</p>
 	</section>
 	<aside class="col-lg-4 pb-3">
-		<section class="pb-3">
-			<h2 class="pb-1">Music</h2>
-			<?php musicFile("Message", "https://drive.google.com/file/d/1svTxR68Ce5mzY9UT7_TcBhge5IjihkyF/preview?usp=sharing"); ?>
-		</section>
-		<?php
+
+		<?php musicFile("Message", "https://drive.google.com/file/d/1svTxR68Ce5mzY9UT7_TcBhge5IjihkyF/preview?usp=sharing");
 		// Displaying Indicators, Images, and Controls
 		$carouselData = [
 			["stanhalen/stanhalen1.jpg", "Stan Halen"],
@@ -41,7 +38,7 @@ responsiveImageCSS();
 	</aside>
 </div>
 <?php
-// Pop-up image links
+// Displaying Modal Section
 $modalData = [
 	["Stan Halen", "stanhalen/stanhalen1.jpg", "Stan Halen"],
 	["Stan Halen", "stanhalen/stanhalen2.jpg", "Stan Halen"],

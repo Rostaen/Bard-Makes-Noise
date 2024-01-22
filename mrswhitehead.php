@@ -27,21 +27,18 @@ responsiveImageCSS();
 		</p>
 	</section>
 	<aside class="col-lg-4 pb-3">
-		<section class="pb-3">
-			<h2 class="pb-1">Music</h2>
-			<?php
-			$musicData = [
-				["I Ain't No Lightweight", "https://drive.google.com/file/d/1HMB6t9d1dyJH-RTBNVbOUpNEyR0Y50rf/preview?usp=sharing"],
-				["I Like Fucking", "https://drive.google.com/file/d/1O0UQOx13VHy7JtU9FkDiDTvBA88TkGQx/preview?usp=sharing"],
-				["I'm In Love (With Me)", "https://drive.google.com/file/d/1KTyoOHJFY1R16bdv5gT05Mw2OIbD9TXU/preview?usp=sharing"],
-				["Just Kidding", "https://drive.google.com/file/d/1ap1if3lRtMBOBIpkBRO0EdZby4ICv8Hc/preview?usp=sharing"],
-				["Let's Bowl!", "https://drive.google.com/file/d/1t5fgJ5Aq_YRk1E_5AQhsX_ajnIKpY6Mo/preview?usp=sharing"],
-				["Tuna Helper", "https://drive.google.com/file/d/1FE-kgy5dod4andfTPMokYBefWku2DRZO/preview?usp=sharing"],
-			];
-			displayMusic($musicData);
-			?>
-		</section>
+
 		<?php
+		$musicData = [
+			["I Ain't No Lightweight", "https://drive.google.com/file/d/1HMB6t9d1dyJH-RTBNVbOUpNEyR0Y50rf/preview?usp=sharing"],
+			["I Like Fucking", "https://drive.google.com/file/d/1O0UQOx13VHy7JtU9FkDiDTvBA88TkGQx/preview?usp=sharing"],
+			["I'm In Love (With Me)", "https://drive.google.com/file/d/1KTyoOHJFY1R16bdv5gT05Mw2OIbD9TXU/preview?usp=sharing"],
+			["Just Kidding", "https://drive.google.com/file/d/1ap1if3lRtMBOBIpkBRO0EdZby4ICv8Hc/preview?usp=sharing"],
+			["Let's Bowl!", "https://drive.google.com/file/d/1t5fgJ5Aq_YRk1E_5AQhsX_ajnIKpY6Mo/preview?usp=sharing"],
+			["Tuna Helper", "https://drive.google.com/file/d/1FE-kgy5dod4andfTPMokYBefWku2DRZO/preview?usp=sharing"],
+		];
+		displayMusic($musicData);
+
 		// Displaying Indicators, Images, and Controls
 		$carouselData = [
 			["mrswhitehead/mrswhitehead1.jpg", "Mrs. Whitehead live"],
@@ -58,7 +55,7 @@ responsiveImageCSS();
 	</aside>
 </div>
 <?php
-// Pop-up image links
+// Displaying Modal Section
 $modalData = [
 	["Mrs. Whitehead live", "mrswhitehead/mrswhitehead1.jpg", "Mrs. Whitehead live"],
 	["Mrs. Whitehead live", "mrswhitehead/mrswhitehead2.jpg", "Mrs. Whitehead live"],

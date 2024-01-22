@@ -19,16 +19,15 @@ responsiveImageCSS();
 		</p>
 	</section>
 	<aside class="col-lg-4 pb-3">
-		<section class="pb-3">
-			<h2 class="pb-1">Music</h2>
-			<?php
-			$musicData = [
-				["DJ Set - The Faceship (4/3/96)", "https://drive.google.com/file/d/17Ys4kZdsOwWnfJ8Wm-BMlS5JfnfhHhiR/preview?usp=sharing"],
-				["DJ Set - Ricelab - 32 Broadway (4/12/97)", "https://drive.google.com/file/d/15xZtCmi7yGkBa0_RuRRgNDzst4jK2qOw/preview?usp=sharing"],
-			];
-			musicFileWithSubtitle("Schildkrote", "https://drive.google.com/file/d/1C-Cows6LilVrA5oWgsIDnQOJo_oRwFu6/preview?usp=sharing", "from Technology Doesn't Stop the Imp Next Door");
-			displayMusic($musicData);
-			?>
+
+		<?php
+		$musicData = [
+			["DJ Set - The Faceship (4/3/96)", "https://drive.google.com/file/d/17Ys4kZdsOwWnfJ8Wm-BMlS5JfnfhHhiR/preview?usp=sharing"],
+			["DJ Set - Ricelab - 32 Broadway (4/12/97)", "https://drive.google.com/file/d/15xZtCmi7yGkBa0_RuRRgNDzst4jK2qOw/preview?usp=sharing"],
+		];
+		musicFileWithSubtitle("Schildkrote", "https://drive.google.com/file/d/1C-Cows6LilVrA5oWgsIDnQOJo_oRwFu6/preview?usp=sharing", "from Technology Doesn't Stop the Imp Next Door");
+		displayMusic($musicData);
+		?>
 		</section>
 		<section>
 			<h2 class="pb-1">Photos</h2>
@@ -46,7 +45,7 @@ responsiveImageCSS();
 	</aside>
 </div>
 <?php
-// Pop-up image links
+// Displaying Modal Section
 $modalData = [
 	["John Chrisopher Morton a.k.a. DJ Rollenbutter", "johnmorton/johnmorton.jpg", "John Chrisopher Morton a.k.a. DJ Rollenbutter"],
 	["Album cover for Technology Doesn't Stop the Imp Next Door", "johnmorton/techimpCD.jpg", "Album cover for Technology Doesn't Stop the Imp Next Door"],

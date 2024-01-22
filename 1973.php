@@ -46,13 +46,10 @@ responsiveImageCSS();
 		</p>
 	</section>
 	<aside class="col-lg-4 pb-3">
-		<section class="pb-3">
-			<h2 class="pb-1">Music</h2>
-			<?php
-			musicFile("Afternoon Delight", "https://drive.google.com/file/d/1ZVcIl59518mk_nMY_GwFliioZfpxw8cL/preview?usp=sharing");
-			?>
-		</section>
+
 		<?php
+		musicFile("Afternoon Delight", "https://drive.google.com/file/d/1ZVcIl59518mk_nMY_GwFliioZfpxw8cL/preview?usp=sharing");
+
 		// Displaying Indicators, Images, and Controls
 		$carouselData = [
 			["1973/1973a.jpg", "1973 live in the late 80s"],
@@ -68,7 +65,7 @@ responsiveImageCSS();
 
 <!-- Flyer -->
 <?php
-// Pop-up image links
+// Displaying Modal Section
 $modalData = [
 	["1973 live in the late 80s", "1973/1973a.jpg", "1973 live in the late 80s"],
 	["1973 live in Kline Commons", "1973/1973b.jpg", "1973 live in Kline Commons"],

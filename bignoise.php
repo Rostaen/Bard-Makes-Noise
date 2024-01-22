@@ -24,17 +24,14 @@ responsiveImageCSS();
 		</p>
 	</section>
 	<aside class="col-lg-4 pb-3">
-		<section class="pb-3">
-			<h2 class="pb-1">Music</h2>
-			<?php
-			$musicData = [
-				["Full Nelson MP3", "https://drive.google.com/file/d/1dUZvl4MEU4lh0hdyFB-h6Ao5KrQa6jQK/preview?usp=sharing"],
-				["Virgin's Delight MP3", "https://drive.google.com/file/d/1qnyCPZb7xd39YaUy6D63KTHODwn4TwwG/preview?usp=sharing"],
-			];
-			displayMusic($musicData);
-			?>
-		</section>
+
 		<?php
+		$musicData = [
+			["Full Nelson MP3", "https://drive.google.com/file/d/1dUZvl4MEU4lh0hdyFB-h6Ao5KrQa6jQK/preview?usp=sharing"],
+			["Virgin's Delight MP3", "https://drive.google.com/file/d/1qnyCPZb7xd39YaUy6D63KTHODwn4TwwG/preview?usp=sharing"],
+		];
+		displayMusic($musicData);
+
 		// Displaying Indicators, Images, and Controls
 		$carouselData = [
 			["bignoise/bignoiseposter.jpg", "Big Noise Flyer"],
@@ -58,7 +55,7 @@ responsiveImageCSS();
 	</aside>
 </div>
 <?php
-// Pop-up image links
+// Displaying Modal Section
 $modalData = [
 	["Big Noise Flyer", "bignoise/bignoiseposter.jpg", "Big Noise Flyer"],
 	["Big Noise Live Performance", "bignoise/bignoise1.jpg", "Big Noise Live Performance"],

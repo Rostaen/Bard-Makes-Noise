@@ -18,18 +18,15 @@ responsiveImageCSS();
 		</p>
 	</section>
 	<aside class="col-lg-4 pb-3">
-		<section class="pb-3">
-			<h2 class="pb-1">Music</h2>
-			<?php
-			$musicData = [
-				["Crappy Park", "https://drive.google.com/file/d/1rXSWvQ2j5YX4sxTVAMwZ7Cb7Xs9sShnB/preview?usp=sharing"],
-				["Mouse Detective", "https://drive.google.com/file/d/13XzmZab3quQTqO_eLPHd9mNz6Gbd6a6w/preview?usp=sharing"],
-				["Primer", "https://drive.google.com/file/d/17uRsYQkfd1m0eOZO3-aIOeCYMUjMavg7/preview?usp=sharing"],
-			];
-			displayMusic($musicData);
-			?>
-		</section>
+
 		<?php
+		$musicData = [
+			["Crappy Park", "https://drive.google.com/file/d/1rXSWvQ2j5YX4sxTVAMwZ7Cb7Xs9sShnB/preview?usp=sharing"],
+			["Mouse Detective", "https://drive.google.com/file/d/13XzmZab3quQTqO_eLPHd9mNz6Gbd6a6w/preview?usp=sharing"],
+			["Primer", "https://drive.google.com/file/d/17uRsYQkfd1m0eOZO3-aIOeCYMUjMavg7/preview?usp=sharing"],
+		];
+		displayMusic($musicData);
+
 		// Displaying Indicators, Images, and Controls
 		$carouselData = [
 			["spineless/Spineless7inch.jpg", "Spineless album on Make Out/Strike Out records"],
@@ -41,7 +38,7 @@ responsiveImageCSS();
 	</aside>
 </div>
 <?php
-// Pop-up image links
+// Displaying Modal Section
 $modalData = [
 	["Spineless album on Make Out/Strike Out records", "spineless/Spineless7inch.jpg", "Spineless album on Make Out/Strike Out records"],
 	["Spineless album on Make Out/Strike Out records", "spineless/SpinelessCover.jpg", "Spineless album on Make Out/Strike Out records"],

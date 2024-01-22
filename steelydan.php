@@ -108,7 +108,7 @@ responsiveImageCSS();
 	</aside>
 </div>
 <?php
-// Pop-up image links
+// Displaying Modal Section
 modalPopUp(2, "Donald Fagen article in the Bard Observer, May 28, 1985", "steelydan/steelydan.png", "Donald Fagen article in the Bard Observer, May 28, 1985");
 
 $page->close();

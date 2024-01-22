@@ -21,18 +21,15 @@ responsiveImageCSS();
 		</p>
 	</section>
 	<aside class="col-lg-4 pb-3">
-		<section class="pb-3">
-			<h2 class="pb-1">Music</h2>
-			<?php
-			$musicData = [
-				["Louie Seize", "https://drive.google.com/file/d/1ftGLDfAMSxVia8TvC_x23ggPIuWMqiOg/preview?usp=sharing"],
-				["Softly I Remember Laura", "https://drive.google.com/file/d/1no0mXChNCgx-XubjahBJPF7ksAlkIYnZ/preview?usp=sharing"],
-			];
-			musicFileWithSubtitle("Bit by the Rabid Vengeance of a Woman Gone Wild", "https://drive.google.com/file/d/13E3T79_hH4TAdiV1vZLdBC4m4a6dZzZy/preview?usp=sharing", "Live @ The Rhinecliff Hotel - Febraury 21, 1987");
-			displayMusic($musicData);
-			?>
-		</section>
+
 		<?php
+		$musicData = [
+			["Louie Seize", "https://drive.google.com/file/d/1ftGLDfAMSxVia8TvC_x23ggPIuWMqiOg/preview?usp=sharing"],
+			["Softly I Remember Laura", "https://drive.google.com/file/d/1no0mXChNCgx-XubjahBJPF7ksAlkIYnZ/preview?usp=sharing"],
+		];
+		musicFileWithSubtitle("Bit by the Rabid Vengeance of a Woman Gone Wild", "https://drive.google.com/file/d/13E3T79_hH4TAdiV1vZLdBC4m4a6dZzZy/preview?usp=sharing", "Live @ The Rhinecliff Hotel - Febraury 21, 1987");
+		displayMusic($musicData);
+
 		// Displaying Indicators, Images, and Controls
 		$carouselData = [
 			["rambocob/Rambo1.jpg", "Rambo Cob & the Sheetrockers live"],
@@ -47,7 +44,7 @@ responsiveImageCSS();
 	</aside>
 </div>
 <?php
-// Pop-up image links
+// Displaying Modal Section
 $modalData = [
 	["Rambo Cob & the Sheetrockers live", "rambocob/Rambo1.jpg", "Rambo Cob & the Sheetrockers live"],
 	["Rambo Cob & the Sheetrockers live", "rambocob/rambocob2.jpg", "Rambo Cob & the Sheetrockers live"],

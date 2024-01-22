@@ -19,20 +19,17 @@ responsiveImageCSS();
 	</section>
 	<aside class="col-lg-4 pb-3">
 		<?php videoFile("Video", "https://www.youtube.com/embed/6mPuKacBCK8"); ?>
-		<section class="pb-3">
-			<h2 class="pb-1">Music</h2>
-			<?php
-			$musicData = [
-				["Intro", "https://drive.google.com/file/d/1dPaU0RqLuxXvzM2_BOpD2pJhFxGAw34F/preview?usp=sharing"],
-				["Clyde", "https://drive.google.com/file/d/1O8FWtX4lp2LGyp2btN3A0Qxe7fvTQ1cY/preview?usp=sharing"],
-				["Exit", "https://drive.google.com/file/d/1QrcO5bR4wpx9a-AOmzuO5pUyXc3Nhqvc/preview?usp=sharing"],
-				["Major Mack", "https://drive.google.com/file/d/1pEXLUlnqqiLVmAQifEfLw0qeptGjq3n1/preview?usp=sharing"],
-				["Risin' High", "https://drive.google.com/file/d/1cewxpjR1EjYGwMsud0PSMEP7RHPBIfwL/preview?usp=sharing"],
-			];
-			displayMusic($musicData);
-			?>
-		</section>
+
 		<?php
+		$musicData = [
+			["Intro", "https://drive.google.com/file/d/1dPaU0RqLuxXvzM2_BOpD2pJhFxGAw34F/preview?usp=sharing"],
+			["Clyde", "https://drive.google.com/file/d/1O8FWtX4lp2LGyp2btN3A0Qxe7fvTQ1cY/preview?usp=sharing"],
+			["Exit", "https://drive.google.com/file/d/1QrcO5bR4wpx9a-AOmzuO5pUyXc3Nhqvc/preview?usp=sharing"],
+			["Major Mack", "https://drive.google.com/file/d/1pEXLUlnqqiLVmAQifEfLw0qeptGjq3n1/preview?usp=sharing"],
+			["Risin' High", "https://drive.google.com/file/d/1cewxpjR1EjYGwMsud0PSMEP7RHPBIfwL/preview?usp=sharing"],
+		];
+		displayMusic($musicData);
+
 		// Displaying Indicators, Images, and Controls
 		$carouselData = [
 			["stbooty/stbooty-japan.jpg", "Saint Booty in Japan"],
@@ -50,7 +47,7 @@ responsiveImageCSS();
 	</aside>
 </div>
 <?php
-// Pop-up image links
+// Displaying Modal Section
 $modalData = [
 	["Saint Booty in Japan", "stbooty/stbooty-japan.jpg", "Saint Booty in Japan"],
 	["Saint Booty live", "stbooty/stbootyvassar.jpg", "Saint Booty live"],

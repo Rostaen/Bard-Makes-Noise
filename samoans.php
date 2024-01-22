@@ -39,7 +39,7 @@ responsiveImageCSS();
 	</aside>
 </div>
 <?php
-// Pop-up image links
+// Displaying Modal Section
 $modalData = [
 	["The Samoans", "samoans/samoans1.jpg", "The Samoans"],
 	["The Samoans", "samoans/samoans2.jpg", "The Samoans"],

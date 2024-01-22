@@ -22,20 +22,17 @@ responsiveImageCSS();
 		</p>
 	</section>
 	<aside class="col-lg-4 pb-3">
-		<section class="pb-3">
-			<h2 class="pb-1">Music</h2>
-			<?php
-			$musicData = [
-				["Barnyard Stomp", "https://drive.google.com/file/d/1MlQ6BYaMhO16wDh-rGd65AnxcpuRazwm/preview?usp=sharing", "From the Silver Tape, recorded in Bard Hall 1994"],
-				["Big Stick", "https://drive.google.com/file/d/1cOXtmJta1FCGRfi7lueM_kbfUlf7psC1/preview?usp=sharing", "From the Silver Tape"],
-				["Hudson River", "https://drive.google.com/file/d/1ZSuF4g9BZFBoCYQrv9IndF726N6WUlFV/preview?usp=sharing", "From the Silver Tape"],
-				["Phenylalinine", "https://drive.google.com/file/d/1tfbaCe0cSIBsxREqKEZSBS_pPjIhsH7g/preview?usp=sharing", "from 7\" vinyl release"],
-				["Rib", "https://drive.google.com/file/d/1-2a7-v6qlhgOdto6wj_vhkyZXdVuUct1/preview?usp=sharing", "Recorded in Blum 1995"],
-			];
-			displayMusic($musicData);
-			?>
-		</section>
+
 		<?php
+		$musicData = [
+			["Barnyard Stomp", "https://drive.google.com/file/d/1MlQ6BYaMhO16wDh-rGd65AnxcpuRazwm/preview?usp=sharing", "From the Silver Tape, recorded in Bard Hall 1994"],
+			["Big Stick", "https://drive.google.com/file/d/1cOXtmJta1FCGRfi7lueM_kbfUlf7psC1/preview?usp=sharing", "From the Silver Tape"],
+			["Hudson River", "https://drive.google.com/file/d/1ZSuF4g9BZFBoCYQrv9IndF726N6WUlFV/preview?usp=sharing", "From the Silver Tape"],
+			["Phenylalinine", "https://drive.google.com/file/d/1tfbaCe0cSIBsxREqKEZSBS_pPjIhsH7g/preview?usp=sharing", "from 7\" vinyl release"],
+			["Rib", "https://drive.google.com/file/d/1-2a7-v6qlhgOdto6wj_vhkyZXdVuUct1/preview?usp=sharing", "Recorded in Blum 1995"],
+		];
+		displayMusic($musicData);
+
 		// Displaying Indicators, Images, and Controls
 		$carouselData = [
 			["bobafett/cotfcollage.jpg", "Boba Fett/CotF promo shots"],
@@ -54,7 +51,7 @@ responsiveImageCSS();
 	</aside>
 </div>
 <?php
-// Pop-up image links
+// Displaying Modal Section
 $modalData = [
 	["Boba Fett/CotF promo shots", "bobafett/cotfcollage.jpg", "Boba Fett/CotF promo shots"],
 	["Boba Fett/CotF live", "bobafett/CotF.jpg", "Boba Fett/CotF live"],

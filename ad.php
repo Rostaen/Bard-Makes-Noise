@@ -20,16 +20,15 @@ responsiveImageCSS();
 		</p>
 	</section>
 	<aside class="col-lg-4 pb-3">
-		<section class="pb-3">
-			<h2 class="pb-1">Music</h2>
-			<?php
-			$musicData = [
-				["Deadzone", "https://drive.google.com/file/d/1aVemhBFle6r5ktlZ2OEppJ7QFcqCl_-d/preview?usp=sharing"],
-				["Threat With Intellect", "https://drive.google.com/file/d/12lH9zziFE37iWL4_8Vcx5A2ltOoVA-z9/preview?usp=sharing"],
-				["Whole House Panicked", "https://drive.google.com/file/d/13P_BrgI4YEOvVz5PhgLmA_Bx7aOzoO4o/preview?usp=sharing"],
-			];
-			displayMusic($musicData);
-			?>
+
+		<?php
+		$musicData = [
+			["Deadzone", "https://drive.google.com/file/d/1aVemhBFle6r5ktlZ2OEppJ7QFcqCl_-d/preview?usp=sharing"],
+			["Threat With Intellect", "https://drive.google.com/file/d/12lH9zziFE37iWL4_8Vcx5A2ltOoVA-z9/preview?usp=sharing"],
+			["Whole House Panicked", "https://drive.google.com/file/d/13P_BrgI4YEOvVz5PhgLmA_Bx7aOzoO4o/preview?usp=sharing"],
+		];
+		displayMusic($musicData);
+		?>
 		</section>
 		<section class="pb-4">
 			<h2 class="pb-1">Photos</h2>
