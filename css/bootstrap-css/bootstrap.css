@@ -541,7 +541,7 @@ progress {
 
 .header{
   background-color: #fff;
-  background: url("https://www.bard.edu/library/staging/bmn/images/bmn-header2.png") no-repeat center -302px;
+  background: url("https://www.bard.edu/bardmakesnoise/images/bmn-header2.png") no-repeat center -302px;
   padding-bottom: 72px;
 }
 
@@ -5472,7 +5472,7 @@ textarea.form-control-lg {
   }
   .modal-fullscreen-sm-down .modal-footer {
     border-radius: 0;
-  }  
+  }
   .modal-dialog-block{
     margin:  10px 1%;
   }
