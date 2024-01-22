@@ -1,6 +1,7 @@
 <?php
 require_once("template.php");
 include_once("bandPageFunctions.php");
+// include_once("bandPageData/threeBeastsData.php");
 $page = new Template();
 $page->setTitle('Three Beasts in Heat | Bands of Bard | Bard Makes Noise');
 $page->setMetaKW('');

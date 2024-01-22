@@ -1,6 +1,7 @@
 <?php
 require_once("template.php");
 include_once("bandPageFunctions.php");
+include_once("bandPageData/slowWalkData.php");
 $page = new Template();
 $page->setTitle('Slow Walk 13 | Bands of Bard | Bard Makes Noise');
 $page->setMetaKW('');
@@ -18,27 +19,18 @@ responsiveImageCSS();
 		</p>
 	</section>
 	<aside class="col-lg-4 pb-3">
+		<?php
+		// Displaying music section
+		displayMusic($musicData);
 
-		<?php musicFile("Desire", "https://drive.google.com/file/d/19wubtX1n0SQly-W2t6y5YHyjVQURFxQS/preview?usp=sharing");
 		// Displaying Indicators, Images, and Controls
-		$carouselData = [
-			["sw13/SlowWalk13-Margot.jpg", "Margot Day - Slow Walk 13"],
-			["sw13/SlowWalk13-Dale.jpg", "Marc Dale - Slow Walk 13"],
-			["sw13/SlowWalk13-Kirby.jpg", "Mark Kirby - Slow Walk 13"],
-			["sw13/SlowWalk13-Huber.jpg", "Bruce Huber - Slow Walk 13"],
-		];
 		displayCarousel($carouselData);
 		?>
 	</aside>
 </div>
 <?php
 // Displaying Modal Section
-$modalData = [
-	["Margot Day - Slow Walk 13", "sw13/SlowWalk13-Margot.jpg", "Margot Day - Slow Walk 13"],
-	["Marc Dale - Slow Walk 13", "sw13/SlowWalk13-Dale.jpg", "Marc Dale - Slow Walk 13"],
-	["Mark Kirby - Slow Walk 13", "sw13/SlowWalk13-Kirby.jpg", "Mark Kirby - Slow Walk 13"],
-	["Bruce Huber - Slow Walk 13", "sw13/SlowWalk13-Huber.jpg", "Bruce Huber - Slow Walk 13"],
-];
 displayModal($modalData);
+
 $page->close();
 ?>

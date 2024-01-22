@@ -1,6 +1,7 @@
 <?php
 require_once("template.php");
 include_once("bandPageFunctions.php");
+include_once("bandPageData/samoansData.php");
 $page = new Template();
 $page->setTitle('The Samoans | Bands of Bard | Bard Makes Noise');
 $page->setMetaKW('');
@@ -26,28 +27,12 @@ responsiveImageCSS();
 	<aside class="col-lg-4">
 		<?php
 		// Displaying Indicators, Images, and Controls
-		$carouselData = [
-			["samoans/samoans1.jpg", "The Samoans"],
-			["samoans/samoans2.jpg", "The Samoans"],
-			["samoans/samoans3.jpg", "The Samoans"],
-			["samoans/samoans4.jpg", "The Samoans"],
-			["samoans/samoans5.jpg", "The Samoans"],
-			["showflyers/samoans-poster.jpg", "Show Flyer"],
-		];
 		displayCarousel($carouselData);
 		?>
 	</aside>
 </div>
 <?php
 // Displaying Modal Section
-$modalData = [
-	["The Samoans", "samoans/samoans1.jpg", "The Samoans"],
-	["The Samoans", "samoans/samoans2.jpg", "The Samoans"],
-	["The Samoans", "samoans/samoans3.jpg", "The Samoans"],
-	["The Samoans", "samoans/samoans4.jpg", "The Samoans"],
-	["The Samoans", "samoans/samoans5.jpg", "The Samoans"],
-	["Show Flyer", "showflyers/samoans-poster.jpg", "Show Flyer"],
-];
 displayModal($modalData);
 $page->close();
 ?>

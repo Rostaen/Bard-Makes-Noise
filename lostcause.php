@@ -1,6 +1,7 @@
 <?php
 require_once("template.php");
 include_once("bandPageFunctions.php");
+include_once("bandPageData/lostCauseData.php");
 $page = new Template();
 $page->setTitle('Lost Cause | Bands of Bard | Bard Makes Noise');
 $page->setMetaKW('');
@@ -25,24 +26,15 @@ responsiveImageCSS();
 		<p><a href="https://www.bard.edu/bardmakesnoise/pdfs/lostcause.pdf">Read more from Charlie Lenk about Lost Cause...</a></p>
 	</section>
 	<aside class="col-lg-4">
-		<div class="pb-4">
-			<h2 class="pb-1">Photos</h2>
-			<div id="bigNoiseSlider">
-
-				<!-- The slideshow -->
-				<div class="carousel-inner">
-					<?php
-					carouselImageFirst("lostcause/lostcause.jpg", "Lost Cause live at Manor", 2)
-					?>
-				</div>
-
-			</div>
-		</div>
+		<?php
+		// Displaying Indicators, Images, and Controls
+		displayCarousel($carouselData);
+		?>
 	</aside>
 </div>
 <?php
 // Displaying Modal Section
-modalPopUp(2, "Lost Cause live at Manor", "lostcause/lostcause.jpg", "Lost Cause live at Manor");
+displayModal($modalData);
 
 $page->close();
 ?>

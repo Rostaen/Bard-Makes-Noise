@@ -1,6 +1,7 @@
 <?php
 require_once("template.php");
 include_once("bandPageFunctions.php");
+include_once("bandPageData/sparrowsData.php");
 $page = new Template();
 $page->setTitle('The Sparrows | Bands of Bard | Bard Makes Noise');
 $page->setMetaKW('');
@@ -18,28 +19,20 @@ responsiveImageCSS();
 		</p>
 	</section>
 	<aside class="col-lg-4 pb-3">
-		<section class="mb-3">
-			<h2 class="mb-1">Videos</h2>
-			<?php videoFile("Bard Hall 2008", "https://drive.google.com/file/d/1tdA_lymxTmBecUEpkle4_jZGiOOYfwbH/preview?usp=sharing"); ?>
-		</section>
+		<?php
+		// Displaying video section
+		displayVideos($videoData);
 
-		<?php musicFile("The Day Will Come", "https://drive.google.com/file/d/1HGtIaOjizLIGnpQ8m2sYrX4OqEvypJv9/preview?usp=sharing");
+		// Displaying music section
+		displayMusic($musicData);
+
 		// Displaying Indicators, Images, and Controls
-		$carouselData = [
-			["sparrows/sparrows1.jpg", "The Sparrow promotional photo"],
-			["sparrows/sparrows2.jpg", "The Sparrows live"],
-			["sparrows/sparrows3.jpg", "The Sparrows live"],
-		];
 		displayCarousel($carouselData);
 		?>
 	</aside>
 </div>
 <?php
-$modalData = [
-	["The Sparrow promotional photo", "sparrows/sparrows1.jpg", "The Sparrow promotional photo"],
-	["The Sparrows live", "sparrows/sparrows2.jpg", "The Sparrows live"],
-	["The Sparrows live", "sparrows/sparrows3.jpg", "The Sparrows live"],
-];
 displayModal($modalData);
+
 $page->close();
 ?>

@@ -1,6 +1,7 @@
 <?php
 require_once("template.php");
 include_once("bandPageFunctions.php");
+include_once("bandPageData/wowWowsData.php");
 $page = new Template();
 $page->setTitle('The Wow-wows | Bands of Bard | Bard Makes Noise');
 $page->setMetaKW('');
@@ -26,17 +27,9 @@ responsiveImageCSS();
 	<aside class="col-lg-4 pb-3">
 		<?php
 		// Displaying Music section
-		$musicData = [
-			["Dixie Rex", "https://drive.google.com/file/d/1OPoBHsSJoQd_YYr9P4JGo7NkFziMZzrM/preview?usp=sharing"],
-		];
 		displayMusic($musicData);
 
 		// Displaying Indicators, Images, and Controls
-		$carouselData = [
-			["wow-wows/WowWows7inch.jpg", "The Wow-wows <em>Quite Baroque</em> EP vinyl release"],
-			["wow-wows/WowWows7inchFront.jpg", "The Wow-wows <em>Quite Baroque</em> EP vinyl release"],
-			["wow-wows/WowWowsInsert.jpg", "The Wow-wows <em>Quite Baroque</em> EP vinyl release"],
-		];
 		displayCarousel($carouselData);
 		?>
 	</aside>
@@ -44,11 +37,6 @@ responsiveImageCSS();
 
 <?php
 // Displaying Modal Section
-$modalData = [
-	["The Wow-wows <em>Quite Baroque</em> EP vinyl release", "wow-wows/WowWows7inch.jpg", "The Wow-wows <em>Quite Baroque</em> EP vinyl release"],
-	["The Wow-wows <em>Quite Baroque</em> EP vinyl release", "wow-wows/WowWows7inchFront.jpg", "The Wow-wows <em>Quite Baroque</em> EP vinyl release"],
-	["The Wow-wows <em>Quite Baroque</em> EP vinyl release", "wow-wows/WowWowsInsert.jpg", "The Wow-wows <em>Quite Baroque</em> EP vinyl release"],
-];
 displayModal($modalData);
 
 $page->close();

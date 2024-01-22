@@ -1,6 +1,7 @@
 <?php
 require_once("template.php");
 include_once("bandPageFunctions.php");
+include_once("bandPageData/motherMingData.php");
 $page = new Template();
 $page->setTitle('Mother Ming | Bands of Bard | Bard Makes Noise');
 $page->setMetaKW('');
@@ -24,17 +25,13 @@ responsiveImageCSS();
 		</p>
 	</section>
 	<aside class="col-lg-4 pb-3">
-		<section class="pb-3">
-			<h2 class="pb-1">Video</h2>
-			<?php
-			videoFile("Feeling Better", "https://www.youtube.com/embed/CB7rCwjzTXE");
-			?>
-			<h2 class="pb-1">Music</h2>
-			<?php
-			musicFile("Oh My Children", "https://drive.google.com/file/d/1GHG9N2PgcD7UI3f0XvR9ZY8P0gSTqL0l/preview?usp=sharing");
-			musicFileWithSubtitle("Unhealthy", "https://drive.google.com/file/d/1gZufaOkioD5DzzKCoTl43JlbrqrB8NeF/preview?usp=sharing", "Songs from the Old Gym 2");
-			?>
-		</section>
+		<?php
+		// Displaying video section
+		displayVideos($videoData);
+
+		// Displaying music section
+		displayMusic($musicData);
+		?>
 	</aside>
 </div>
 

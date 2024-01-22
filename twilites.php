@@ -1,6 +1,7 @@
 <?php
 require_once("template.php");
 include_once("bandPageFunctions.php");
+include_once("bandPageData/twilitesData.php");
 $page = new Template();
 $page->setTitle('The Twilites | Bands of Bard | Bard Makes Noise');
 $page->setMetaKW('');
@@ -32,17 +33,6 @@ responsiveImageCSS();
 	<aside class="col-lg-4 pb-3">
 		<?php
 		// Displaying Indicators, Images, and Controls
-		$carouselData = [
-			["twilites/Twilites1.jpg", "The Twilites playing outside Blithewood"],
-			["twilites/Twilites2.jpg", "The Twilites live at Blithewood"],
-			["twilites/Twilites3.jpg", "The Twilites live"],
-			["twilites/twiliteskline.jpg", "The Twilites playing in Kline"],
-			["twilites/twilitesparty4.jpg", "The Twilites Live"],
-			["twilites/twilitesparty3.jpg", "The Twilites Live"],
-			["twilites/twilitesparty2.jpg", "The Twilites Live"],
-			["twilites/twilitesparty1.jpg", "The Twilites Live"],
-			["showflyers/twilitesposter.jpg", "Show Flyer"],
-		];
 		displayCarousel($carouselData);
 		?>
 	</aside>
@@ -50,17 +40,6 @@ responsiveImageCSS();
 
 <?php
 // Displaying Modal Section
-$modalData = [
-	["The Twilites playing outside Blithewood", "twilites/Twilites1.jpg", "The Twilites playing outside Blithewood"],
-	["The Twilites live at Blithewood", "twilites/Twilites2.jpg", "The Twilites live at Blithewood"],
-	["The Twilites live", "twilites/Twilites3.jpg", "The Twilites live"],
-	["The Twilites playing in Kline", "twilites/twiliteskline.jpg", "The Twilites playing in Kline"],
-	["The Twilites Live", "twilites/twilitesparty4.jpg", "The Twilites Live"],
-	["The Twilites Live", "twilites/twilitesparty3.jpg", "The Twilites Live"],
-	["The Twilites Live", "twilites/twilitesparty2.jpg", "The Twilites Live"],
-	["The Twilites Live", "twilites/twilitesparty1.jpg", "The Twilites Live"],
-	["Show Flyer", "showflyers/twilitesposter.jpg", "Show Flyer"],
-];
 displayModal($modalData);
 
 $page->close();

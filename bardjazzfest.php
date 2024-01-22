@@ -1,6 +1,7 @@
 <?php
 require_once("template.php");
 include_once("bandPageFunctions.php");
+include_once("bandPageData/bardJazzFestData.php");
 $page = new Template();
 $page->setTitle('Home | Bard Makes Noise');
 $page->setMetaKW('');
@@ -20,21 +21,18 @@ responsiveImageCSS();
 	<aside class="col-lg-4 pb-3">
 
 		<?php
-		$musicData = [
-			["Black Is The Color MP3", "https://drive.google.com/file/d/1It1Ju8c5Zaf3MrsqtL9qGZcQoRbIPhG4/preview?usp=sharing"],
-			["Evil (with <a href=\"http://en.wikipedia.org/wiki/Jeanne_Lee\" target=\"_blank\">Jeanne Lee</a>)", "https://drive.google.com/file/d/1dbAdrdXzBikgGYiu5LAwmuBAEeKp5r2_/preview?usp=sharing"],
-		];
+		// Displaying music section
 		displayMusic($musicData);
+
+		// Displaying Indicators, Images, and Controls
+		displayCarousel($carouselData);
 		?>
-		<h2 class="pb-1">Photos</h2>
-		<?php
-		basicImage("bardjazzfest/guyducornet.jpg", "Guy Ducornet playing saxiphone during the Bard Jazz Festival", 1);
-		?>
-		</section>
 	</aside>
 </div>
 
 <?php
-modalPopUp(1, "Guy Ducornet Bard 1959", "bardjazzfest/guyducornet.jpg", "Guy Ducornet playing saxiphone during the Bard Jazz Festival");
+// Displaying Modal Section
+displayModal($modalData);
+
 $page->close();
 ?>

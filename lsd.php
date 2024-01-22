@@ -1,6 +1,7 @@
 <?php
 require_once("template.php");
 include_once("bandPageFunctions.php");
+include_once("bandPageData/lsdData.php");
 $page = new Template();
 $page->setTitle('Leon\'s Sanguine Delight | Bands of Bard | Bard Makes Noise');
 $page->setMetaKW('');
@@ -47,22 +48,13 @@ responsiveImageCSS();
 		</section>
 		<?php
 		// Displaying Indicators, Images, and Controls
-		$carouselData = [
-			["lsd/lsd1.jpg", "Harold Lehman and Dan McBride 1984"],
-			["lsd/lsd2.jpg", "Dan McBride and Harold Lehman"],
-			["lsd/lsdReview.png", "L.S.D. review in Bard Weekly Fall '85"],
-		];
 		displayCarousel($carouselData);
 		?>
 	</aside>
 </div>
 <?
 // Displaying Modal Section
-$modalData = [
-	["Harold Lehman and Dan McBride 1984", "lsd/lsd1.jpg", "Harold Lehman and Dan McBride 1984"],
-	["Dan McBride and Harold Lehman", "lsd/lsd2.jpg", "Dan McBride and Harold Lehman"],
-	["L.S.D. review in Bard Weekly Fall '85", "lsd/lsdReview.png", "L.S.D. review in Bard Weekly Fall '85"],
-];
 displayModal($modalData);
+
 $page->close();
 ?>

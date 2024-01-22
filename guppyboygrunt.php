@@ -1,6 +1,7 @@
 <?php
 require_once("template.php");
 include_once("bandPageFunctions.php");
+include_once("bandPageData/guppyBoyGruntData.php");
 $page = new Template();
 $page->setTitle('Guppy Boy Grunt | Bands of Bard | Bard Makes Noise');
 $page->setMetaKW('');
@@ -27,21 +28,11 @@ responsiveImageCSS();
 		</p>
 	</section>
 	<aside class="col-lg-4 pb-3">
-
 		<?php
-		$musicData = [
-			["All Fall Down", "https://drive.google.com/file/d/1lGL9OL9WsbcCbWA-FKbhJ-slraVa6p5a/preview?usp=sharing"],
-			["Captain of the Day", "https://drive.google.com/file/d/1j-WBkMOKl7VdIWz1Sp-A0fao6dKKrhdF/preview?usp=sharing"],
-			["Hitch Hiker", "https://drive.google.com/file/d/1BBiW3PRCAJEnxMZYDv9UBoNHnnx8v5qT/preview?usp=sharing"],
-		];
+		// Displaying music data
 		displayMusic($musicData);
 
 		// Displaying Indicators, Images, and Controls
-		$carouselData = [
-			["gbg/GBG1.jpg", "Guppy Boy Grunt live on campus"],
-			["gbg/GBG2.jpg", "Guppy Boy Grunt live on campus"],
-			["gbg/GBG3.jpg", "Guppy Boy Grunt live on campus"],
-		];
 		displayCarousel($carouselData);
 		?>
 	</aside>
@@ -49,11 +40,7 @@ responsiveImageCSS();
 
 <?php
 // Displaying Modal Section
-$modalData = [
-	["Guppy Boy Grunt live on campus", "gbg/GBG1.jpg", "Guppy Boy Grunt live on campus"],
-	["Guppy Boy Grunt live on campus", "gbg/GBG2.jpg", "Guppy Boy Grunt live on campus"],
-	["Guppy Boy Grunt live on campus", "gbg/GBG3.jpg", "Guppy Boy Grunt live on campus"],
-];
 displayModal($modalData);
+
 $page->close();
 ?>

@@ -1,6 +1,7 @@
 <?php
 require_once("template.php");
 include_once("bandPageFunctions.php");
+include_once("bandPageData/stanHalenData.php");
 $page = new Template();
 $page->setTitle('Stan Halen | Bands of Bard | Bard Makes Noise');
 $page->setMetaKW('');
@@ -24,27 +25,18 @@ responsiveImageCSS();
 		</p>
 	</section>
 	<aside class="col-lg-4 pb-3">
+		<?php
+		// Displaying music section
+		displayMusic($musicData);
 
-		<?php musicFile("Message", "https://drive.google.com/file/d/1svTxR68Ce5mzY9UT7_TcBhge5IjihkyF/preview?usp=sharing");
 		// Displaying Indicators, Images, and Controls
-		$carouselData = [
-			["stanhalen/stanhalen1.jpg", "Stan Halen"],
-			["stanhalen/stanhalen2.jpg", "Stan Halen"],
-			["stanhalen/stanhalen3.jpg", "Stan Halen"],
-			["stanhalen/stanhalen4.jpg", "Stan Halen"],
-		];
 		displayCarousel($carouselData);
 		?>
 	</aside>
 </div>
 <?php
 // Displaying Modal Section
-$modalData = [
-	["Stan Halen", "stanhalen/stanhalen1.jpg", "Stan Halen"],
-	["Stan Halen", "stanhalen/stanhalen2.jpg", "Stan Halen"],
-	["Stan Halen", "stanhalen/stanhalen3.jpg", "Stan Halen"],
-	["Stan Halen", "stanhalen/stanhalen4.jpg", "Stan Halen"],
-];
 displayModal($modalData);
+
 $page->close();
 ?>

@@ -1,6 +1,7 @@
 <?php
 require_once("template.php");
 include_once("bandPageFunctions.php");
+include_once("bandPageData/margoLaneData.php");
 $page = new Template();
 $page->setTitle('Margo Lane | Bands of Bard | Bard Makes Noise');
 $page->setMetaKW('');
@@ -18,10 +19,10 @@ responsiveImageCSS();
 		</p>
 	</section>
 	<aside class="col-lg-4 pb-3">
-		<div class="pb-3">
-			<h2 class="pb-1">Music</h2>
-			<?php musicFileWithSubtitle("Zutroid", "https://drive.google.com/file/d/1MDpolCKsND_w0A5KCaR7G9LmN2VRdQu-/preview?usp=sharing", "May 1994"); ?>
-		</div>
+		<?php
+		// Displaying music section
+		displayMusic($musicData);
+		?>
 	</aside>
 </div>
 

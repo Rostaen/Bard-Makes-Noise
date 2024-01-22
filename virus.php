@@ -1,6 +1,7 @@
 <?php
 require_once("template.php");
 include_once("bandPageFunctions.php");
+include_once("bandPageData/virusData.php");
 $page = new Template();
 $page->setTitle('Virus | Bands of Bard | Bard Makes Noise');
 $page->setMetaKW('');
@@ -20,19 +21,9 @@ responsiveImageCSS();
 	<aside class="col-lg-4 pb-3">
 		<?php
 		// Displaying Music section
-		$musicData = [
-			["Get Naked", "https://drive.google.com/file/d/1PgEHJl9aW3q5_t1DTYzAd-hFPRVgL51p/preview?usp=sharing", "Live at Bard 1977"],
-			["Cynic in Love", "https://drive.google.com/file/d/1Xh89fwkpzXuSUsut1sXJkwjGB3FvnK_M/preview?usp=sharing", "Live at Bard 1977"],
-		];
 		displayMusic($musicData, 1);
 
 		// Displaying Indicators, Images, and Controls
-		$carouselData = [
-			["virus/virus.jpg", "Virus promotional still"],
-			["virus/virusreunion1.jpg", "Virus reunion show 1999"],
-			["virus/virusreunion2.jpg", "Virus reunion show 1999"],
-			["showflyers/virus-reunion.jpg", "Show Flyer"],
-		];
 		displayCarousel($carouselData);
 		?>
 	</aside>
@@ -40,12 +31,6 @@ responsiveImageCSS();
 
 <?php
 // Displaying Modal Section
-$modalData = [
-	["Virus promotional still", "virus/virus.jpg", "Virus promotional still"],
-	["Virus reunion show 1999", "virus/virusreunion1.jpg", "Virus reunion show 1999"],
-	["Virus reunion show 1999", "virus/virusreunion2.jpg", "Virus reunion show 1999"],
-	["Show Flyer", "showflyers/virus-reunion.jpg", "Show Flyer"],
-];
 displayModal($modalData);
 
 $page->close();

@@ -1,6 +1,7 @@
 <?php
 require_once("template.php");
 include_once("bandPageFunctions.php");
+include_once("bandPageData/skipStrong6Data.php");
 $page = new Template();
 $page->setTitle('Skip Strong\'s Steamboat Six | Bands of Bard | Bard Makes Noise');
 $page->setMetaKW('');
@@ -28,19 +29,16 @@ responsiveImageCSS();
 		</p>
 	</section>
 	<aside class="col-lg-4">
-		<section class="pb-4">
-			<h2 class="pb-1">Photos</h2>
-			<!-- The slideshow -->
-			<div class="carousel-inner">
-				<?php carouselImageFirst("skipstong6/skipstrong6.jpg", "Group photo of the band holding instruments", 1) ?>
-			</div>
-		</section>
+		<?php
+		// Displaying Indicators, Images, and Controls
+		displayCarousel($carouselData);
+		?>
 	</aside>
 </div>
 </div>
 <?php
 // Displaying Modal Section
-modalPopUp(1, "Skip Strong's Steamboat Six", "skipstong6/skipstrong6.jpg", "Group photo of the band holding instruments");
+displayModal($modalData);
 
 $page->close();
 ?>

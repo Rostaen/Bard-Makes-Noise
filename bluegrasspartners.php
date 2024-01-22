@@ -1,6 +1,7 @@
 <?php
 require_once("template.php");
 include_once("bandPageFunctions.php");
+include_once("bandPageData/blueGrassPartnersData.php");
 $page = new Template();
 $page->setTitle('Bluegrass Partners | Bands of Bard | Bard Makes Noise');
 $page->setMetaKW('');
@@ -30,10 +31,6 @@ responsiveImageCSS();
 	<aside class="col-lg-4">
 		<?php
 		// Displaying Indicators, Images, and Controls
-		$carouselData = [
-			["bluegrasspartners/observer3-21-67.jpg", "Bard Observer article on Bluegrass Partners"],
-			["bluegrasspartners/bluegrass partners chip.jpg", "CHG [Christopher Haden-Guest] and the Bluegrass Partners (Photo courtesy of Brian Nielsen)"],
-		];
 		displayCarousel($carouselData);
 		?>
 	</aside>
@@ -41,10 +38,7 @@ responsiveImageCSS();
 
 <?php
 // Displaying Modal Section
-$modalData = [
-	["Skip Strong's Steamboat Six", "bluegrasspartners/observer3-21-67.jpg", "Bard Observer article on Bluegrass Partners"],
-	["CHG [Christopher Haden-Guest] and the Bluegrass Partners (Photo courtesy of Brian Nielsen)", "bluegrasspartners/bluegrass partners chip.jpg", "CHG [Christopher Haden-Guest] and the Bluegrass Partners (Photo courtesy of Brian Nielsen)"],
-];
 displayModal($modalData);
+
 $page->close();
 ?>

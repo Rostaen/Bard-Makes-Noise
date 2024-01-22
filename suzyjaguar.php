@@ -1,6 +1,7 @@
 <?php
 require_once("template.php");
 include_once("bandPageFunctions.php");
+include_once("bandPageData/suzyJaguarData.php");
 $page = new Template();
 $page->setTitle('Suzy Jaguar &amp; the Mechanics | Bands of Bard | Bard Makes Noise');
 $page->setMetaKW('');
@@ -23,14 +24,6 @@ responsiveImageCSS();
 	<aside class="col-lg-4 pb-3">
 		<?php
 		// Displaying Indicators, Images, and Controls
-		$carouselData = [
-			["suzyjaguar/SJM.jpg", "Suzy Jaguar &amp; the Mechanics live outside Stone"],
-			["suzyjaguar/SJM2.jpg", "Suzy Jaguar &amp; the Mechanics live outside Stone"],
-			["suzyjaguar/SJM-Abdi.jpg", "Suzy Jaguar &amp; the Mechanics live outside Stone"],
-			["suzyjaguar/SJM-Michael.jpg", "Suzy Jaguar &amp; the Mechanics live outside Stone"],
-			["suzyjaguar/SJM-Ivan.jpg", "Suzy Jaguar &amp; the Mechanics live outside Stone"],
-			["suzyjaguar/SJM-Ivan2.jpg", "Suzy Jaguar &amp; the Mechanics live outside Stone"],
-		];
 		displayCarousel($carouselData);
 		?>
 	</aside>
@@ -38,14 +31,6 @@ responsiveImageCSS();
 
 <?php
 // Displaying Modal Section
-$modalData = [
-	["Suzy Jaguar &amp; the Mechanics live outside Stone Row", "suzyjaguar/SJM.jpg", "Suzy Jaguar &amp; the Mechanics live outside Stone Row"],
-	["Suzy Jaguar &amp; the Mechanics live outside Stone Row", "suzyjaguar/SJM2.jpg", "Suzy Jaguar &amp; the Mechanics live outside Stone Row"],
-	["Suzy Jaguar &amp; the Mechanics live outside Stone Row", "suzyjaguar/SJM-Abdi.jpg", "Suzy Jaguar &amp; the Mechanics live outside Stone Row"],
-	["Suzy Jaguar &amp; the Mechanics live outside Stone Row", "suzyjaguar/SJM-Michael.jpg", "Suzy Jaguar &amp; the Mechanics live outside Stone Row"],
-	["Suzy Jaguar &amp; the Mechanics live outside Stone Row", "suzyjaguar/SJM-Ivan.jpg", "Suzy Jaguar &amp; the Mechanics live outside Stone Row"],
-	["Suzy Jaguar &amp; the Mechanics live outside Stone Row", "suzyjaguar/SJM-Ivan2.jpg", "Suzy Jaguar &amp; the Mechanics live outside Stone Row"],
-];
 displayModal($modalData);
 
 $page->close();

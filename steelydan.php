@@ -1,6 +1,7 @@
 <?php
 require_once("template.php");
 include_once("bandPageFunctions.php");
+// include_once("bandPageData/steelyDanData.php");
 $page = new Template();
 $page->setTitle('Donald Fagen &amp; Walter Becker | Steely Dan | Bands of Bard | Bard Makes Noise');
 $page->setMetaKW('');

@@ -1,6 +1,7 @@
 <?php
 require_once("template.php");
 include_once("bandPageFunctions.php");
+include_once("bandPageData/beastieBoysData.php");
 $page = new Template();
 $page->setTitle('Beastie Boys | Bands of Bard | Bard Makes Noise');
 $page->setMetaKW('');
@@ -18,22 +19,15 @@ responsiveImageCSS();
 		</p>
 	</section>
 	<aside class="col-lg-4 pb-3">
-		<h2 class="pb-1">Photos</h2>
 		<?php
-		$imageData = [
-			["beastieboys/beastieboysClipping.png", "Bard Observer writeup about Adam Yaunch touring with the Beastie Boys"],
-			["beastieboys/adam-yauch-caption.jpg", "Adam Yaunch receiving Charles Flint Kellog award (from the Bardian)"],
-		];
+		// Displaying Indicators, Images, and Controls
 		displayBasicImg($imageData);
 		?>
 	</aside>
 </div>
 <?php
 // Displaying Modal Section
-$modalData = [
-	["Bard Observer writeup about Adam Yaunch touring with the Beastie Boys", "beastieboys/beastieboysClipping.png", "Bard Observer writeup about Adam Yaunch touring with the Beastie Boys"],
-	["Adam Yaunch receiving Charles Flint Kellog award (from the Bardian)", "beastieboys/adam-yauch-caption.jpg", "Adam Yaunch receiving Charles Flint Kellog award (from the Bardian)"],
-];
 displayModal($modalData);
+
 $page->close();
 ?>
