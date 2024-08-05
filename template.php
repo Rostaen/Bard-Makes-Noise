@@ -69,7 +69,7 @@ class Template
 			<footer class="footer container-fluid">
 				<div class="container pt-3">
 					<p class="text-center">
-						©<?php echo date(Y); ?> Bard Archives • 1 Library Road, Annandale-on-Hudson, NY 12504 • 845.758.7148 • <a href="https://forms.gle/zMPDWXTcRUsEyX7r6" target="_blank">Contact</a>
+						©<?php echo date('Y'); ?> Bard Archives • 1 Library Road, Annandale-on-Hudson, NY 12504 • 845.758.7148 • <a href="https://forms.gle/zMPDWXTcRUsEyX7r6" target="_blank">Contact</a>
 					</p>
 					<div class="row">
 						<div class="col-lg-2"></div>
